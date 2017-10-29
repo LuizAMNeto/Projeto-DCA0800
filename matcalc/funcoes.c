@@ -5,6 +5,12 @@
 
 #define DIM_MAX 20
 
+/**
+ * @brief matDim "Dimensiona o tamanho da matriz a partir de dois valores inteiros fornecidos pelo usuário."
+ * @param l
+ * @param c
+ */
+
 void matDim(int *l, int *c){
 
     printf("Defina a quantidade de linhas: ");
@@ -16,6 +22,13 @@ void matDim(int *l, int *c){
     system("cls");
 
 }
+
+/**
+ * @brief matInit "Atribui valores aleatórios entre 0.00 e 10.00 as entradas de qualquer matriz fonecida."
+ * @param l
+ * @param c
+ * @param matriz
+ */
 
 void matInit(int l, int c, float matriz[][DIM_MAX]){
 
@@ -34,6 +47,13 @@ void matInit(int l, int c, float matriz[][DIM_MAX]){
     system("cls");
 }
 
+/**
+ * @brief matPrint "Exibe na tela os valores de uma matriz fornecida."
+ * @param l
+ * @param c
+ * @param matriz
+ */
+
 void matPrint (int l, int c, float matriz[][DIM_MAX]){
 
     int i, j;
@@ -48,6 +68,13 @@ void matPrint (int l, int c, float matriz[][DIM_MAX]){
     }
 }
 
+/**
+ * @brief matAtrib "Permite que o usuário atribua valores manualmente as entradas de uma matriz fornecida."
+ * @param l
+ * @param c
+ * @param matriz
+ */
+
 void matAtrib(int l, int c, float matriz[][DIM_MAX]){
 
     int i, j;
@@ -60,6 +87,15 @@ void matAtrib(int l, int c, float matriz[][DIM_MAX]){
         }
     }
 }
+
+/**
+ * @brief matSum "Soma valores correspondentes de duas matrizes fornecidas, atribuindo os valores a uma matriz resultante."
+ * @param mA
+ * @param mB
+ * @param mC
+ * @param l
+ * @param c
+ */
 
 void matSum(float mA[][DIM_MAX], float mB[][DIM_MAX], float mC[][DIM_MAX], int l, int c){
 
@@ -77,6 +113,15 @@ void matSum(float mA[][DIM_MAX], float mB[][DIM_MAX], float mC[][DIM_MAX], int l
     system("cls");
 }
 
+/**
+ * @brief matSub "Subtrai valores correspondentes de duas matrizes fornecidas, atribuindo os valores a uma matriz resultante."
+ * @param mA
+ * @param mB
+ * @param mC
+ * @param l
+ * @param c
+ */
+
 void matSub(float mA[][DIM_MAX], float mB[][DIM_MAX], float mC[][DIM_MAX], int l, int c){
 
     int i, j;
@@ -91,6 +136,16 @@ void matSub(float mA[][DIM_MAX], float mB[][DIM_MAX], float mC[][DIM_MAX], int l
     system("pause");
     system("cls");
 }
+
+/**
+ * @brief matProd "Efetua a operação de multiplicação entre duas matrizes, armazenando o produto em uma matriz resultante."
+ * @param mA
+ * @param mB
+ * @param mC
+ * @param l
+ * @param c
+ * @param n
+ */
 
 void matProd(float mA[][DIM_MAX], float mB[][DIM_MAX], float mC[][DIM_MAX], int l, int c, int n){
 

@@ -2,10 +2,6 @@
 #define MATCALC_H
 #define DIM_MAX 20
 
-/**
- * @brief matDim "Dimensiona a matriz de elementos a partir de dois valores inteiros fornecidos pelo usuário."
- */
-
 void matDim(int *, int *);
 
 void matInit(int, int, float [][DIM_MAX]);
