@@ -1,12 +1,23 @@
 #ifndef MATCALC_H
 #define MATCALC_H
+#define DIM_MAX 20
 
-//exibe um menu interativo para que o usuario escolha as operações matriciais.
+/**
+ * @brief matDim "Dimensiona a matriz de elementos a partir de dois valores inteiros fornecidos pelo usuário."
+ */
 
-void matDim(float [][10]);
+void matDim(int *, int *);
 
-void matInit(int, int, float [][10]);
+void matInit(int, int, float [][DIM_MAX]);
 
-//void matPrint (float [][10]);
+void matPrint (int, int, float [][DIM_MAX]);
+
+void matAtrib(int, int, float [][DIM_MAX]);
+
+void matSum(float [][DIM_MAX], float [][DIM_MAX], float [][DIM_MAX], int, int);
+
+void matSub(float [][DIM_MAX], float [][DIM_MAX], float [][DIM_MAX], int, int);
+
+void matProd(float [][DIM_MAX], float [][DIM_MAX], float [][DIM_MAX], int, int, int);
 
 #endif // MATCALC_H

@@ -3,111 +3,186 @@
 #include <conio.h>
 #include <matcalc.h>
 
-#define DIM_MAX 10
+#define DIM_MAX 20
 
 int main(void){
 
     float matA[DIM_MAX][DIM_MAX];
     float matB[DIM_MAX][DIM_MAX];
+    float matC[DIM_MAX][DIM_MAX];
 
-    int i,j, l=5,c=5;
-
+    int lA=0, cA=0;
+    int lB=0, cB=0;
+    int lC, cC;
+    int sair = 0;
     int opcao;
 
-    printf("PROGRAMA DE MANIPULACAO DE MATRIZES\n\n");
-    printf("(1) Definir o tamanho da matriz A\n");
-    printf("(2) Definir o tamanho da matriz B\n");
-    printf("(3) Preencher a matriz A com valores aleatórios\n");
-    printf("(4) Preencher a matriz B com valores aleatórios\n");
-    printf("(5) Atribuir valor para um elemento da matriz A\n");
-    printf("(6) Atribuir valor para um elemento da matriz B\n");
-    printf("(7) Calcular A+B\n");
-    printf("(8) Calcular A-B\n");
-    printf("(9) Calcular A*B\n");
-    printf("(10) Imprimir matriz A\n");
-    printf("(11) Imprimir matriz B\n");
-    printf("(12) Imprimir matriz C\n");
-    printf("(13) Sair\n");
+    while(sair == 0){
 
-    scanf("%d", &opcao);
+        printf("PROGRAMA DE MANIPULACAO DE MATRIZES\n\n");
+        printf("(1) Definir o tamanho da matriz A\n");
+        printf("(2) Definir o tamanho da matriz B\n");
+        printf("(3) Preencher a matriz A com valores aleatorios\n");
+        printf("(4) Preencher a matriz B com valores aleatorios\n");
+        printf("(5) Atribuir valor para um elemento da matriz A\n");
+        printf("(6) Atribuir valor para um elemento da matriz B\n");
+        printf("(7) Calcular A+B\n");
+        printf("(8) Calcular A-B\n");
+        printf("(9) Calcular A*B\n");
+        printf("(10) Imprimir matriz A\n");
+        printf("(11) Imprimir matriz B\n");
+        printf("(12) Imprimir matriz C\n");
+        printf("(13) Sair\n");
 
-    system("cls");
+        printf("\nlA=%d cA=%d lB=%d cB=%d\n", lA, cA, lB, cB);
 
-    switch (opcao) {
+        printf("\nDigite sua opcao: ");
 
-    case 1:
+        scanf("%d", &opcao);
 
-        matDim(matA);
+        system("cls");
 
-        for(i=0 ; i < l ; i++){
-            for(j=0 ; j < c ; j++){
+        switch (opcao) {
 
-                printf ("%0.2f ", matA[i][j]);
+        case 1:
+
+            matDim(&lA, &cA);
+
+            break;
+
+        case 2:
+
+            matDim(&lB, &cB);
+
+            break;
+
+        case 3:
+
+            matInit(lA, cA, matA);
+
+            break;
+
+        case 4:
+
+            matInit(lB, cB, matB);
+
+            break;
+
+        case 5:
+
+            matAtrib(lA, cA, matA);
+            system("cls");
+
+            break;
+
+        case 6:
+
+            matAtrib(lB, cB, matB);
+            system("cls");
+
+            break;
+
+        case 7:
+
+            if(lA == lB && cA == cB){
+
+                lC = lA;
+                cC = cA;
+
+                matSum(matA,matB,matC,lC,cC);
 
             }
-            printf("\n");
+
+            else{
+
+                printf("As matrizes nao podem ser somadas pois suas dimensoes sao diferentes!\n");
+
+                system("pause");
+                system("cls");
+
+            }
+
+            break;
+
+        case 8:
+
+            if(lA == lB && cA == cB){
+
+                lC = lA;
+                cC = cA;
+
+                matSub(matA,matB,matC,lC,cC);
+
+            }
+
+            else{
+
+                printf("As matrizes nao podem ser subtraidas pois suas dimensoes sao diferentes!\n");
+
+                system("pause");
+                system("cls");
+
+            }
+
+            break;
+
+        case 9:
+
+            if(cA == lB){
+
+                lC = lA;
+                cC = cB;
+
+                matProd(matA,matB,matC,lC,cC,cA);
+
+            }
+
+            else{
+
+                printf("As matrizes nao podem ser multiplicadas pois o numero de colunas da primeira e diferente do numero de linhas da segunda!\n");
+                system("pause");
+                system("cls");
+
+            }
+
+            break;
+
+        case 10:
+
+            matPrint(lA, cA, matA);
+            system("pause");
+            system("cls");
+
+            break;
+
+        case 11:
+
+            matPrint(lB, cB, matB);
+            system("pause");
+            system("cls");
+
+            break;
+
+        case 12:
+
+            matPrint(lC, cC, matC);
+            system("pause");
+            system("cls");
+
+            break;
+
+        case 13:
+
+            sair = 1;
+            break;
+
+        default:
+
+            printf("Opcao invalida! Escolha novamente.\n");
+            system("pause");
+            system("cls");
+
         }
-
-        main();
-
-    case 2:
-
-        matDim(matB);
-
-        main();
-
-    case 3:
-
-                break;
-
-    case 4:
-
-        break;
-
-    case 5:
-
-        break;
-
-    case 6:
-
-        break;
-
-    case 7:
-
-        break;
-
-    case 8:
-
-        break;
-
-    case 9:
-
-        break;
-
-    case 10:
-
-        //matPrint(matA);
-
-        break;
-
-    case 11:
-
-        //matPrint(matB);
-
-        break;
-
-    case 12:
-
-        break;
-
-    case 13:
-
-        exit(1);
-
-    default:
-
-        printf("Opcao invalida! Escolha novamente\n");
-
 
     }
 
