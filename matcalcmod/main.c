@@ -36,7 +36,10 @@ int main(void){
         printf("(10) Imprimir matriz A\n");
         printf("(11) Imprimir matriz B\n");
         printf("(12) Imprimir matriz C\n");
-        printf("(13) Sair\n");
+        printf("(13) Ler a matriz A de um arquivo\n");
+        printf("(14) Ler a matriz B de um arquivo\n");
+        printf("(15) Escrever a matriz C em um arquivo\n");
+        printf("(16) Sair\n");
 
         printf("\nlA=%d cA=%d lB=%d cB=%d\n", matA.r, matA.c, matB.r, matB.c);
 
@@ -203,6 +206,21 @@ int main(void){
             break;
 
         case 13:
+
+            matRead(&matA, 'a');
+            break;
+
+        case 14:
+
+            matRead(&matB, 'b');
+            break;
+
+        case 15:
+
+            //matWrite(matC)
+            break;
+
+        case 16:
 
             sair = 1;
             break;

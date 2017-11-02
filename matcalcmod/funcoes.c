@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+#include <string.h>
 
 #define DIM_MAX 20
 
@@ -169,3 +170,68 @@ void matProd(matriz *mA, matriz *mB, matriz *mC){
     system("pause");
     system("cls");
 }
+
+void matRead(matriz *m, char sel){
+
+    FILE *file;
+    char ver;
+    int i,j;
+
+    if (sel == 'a'){
+
+        file = fopen("matriz_a.txt", "r");
+    }
+
+    else{
+
+        file = fopen("matriz_b.txt", "r");
+    }
+
+    if(file == NULL){
+
+        printf("Arquivo nao encontrado!");
+        system("pause");
+        return;
+
+    }
+
+    m->c = 0;
+    m->r = 0;
+
+    while((ver=fgetc(file))!='\n'){
+        if(ver == ' '){
+            m->c++;
+        }
+    }
+
+    rewind(file);
+
+    while((ver=fgetc(file))!= EOF ){
+        if(ver == '\n'){
+            m->r++;
+        }
+    }
+
+    m->c++;
+    m->r++;
+
+    rewind(file);
+
+    for(i=0 ; i < m->r ; i++){
+        for(j=0 ; j < m->c ; j++){
+
+            fscanf(file, "%f", &m->mat[i][j]);
+        }
+    }
+
+    fclose(file);
+
+    printf("Matriz lida com sucesso!\n");
+    system("pause");
+    system("cls");
+}
+
+/*void matWrite(matriz *m){
+
+
+}*/

@@ -24,4 +24,6 @@ void matSub(matriz *, matriz *, matriz *);
 
 void matProd(matriz *, matriz *, matriz *);
 
+void matRead(matriz *, char);
+
 #endif // MATCALCMOD_H
