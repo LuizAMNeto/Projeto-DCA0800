@@ -26,4 +26,6 @@ void matProd(matriz *, matriz *, matriz *);
 
 void matRead(matriz *, char);
 
+void matWrite(matriz *);
+
 #endif // MATCALCMOD_H

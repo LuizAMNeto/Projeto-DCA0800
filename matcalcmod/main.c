@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <conio.h>
 #include <matcalcmod.h>
+#include <windows.h>
 
 #define DIM_MAX 20
 
@@ -41,7 +42,7 @@ int main(void){
         printf("(15) Escrever a matriz C em um arquivo\n");
         printf("(16) Sair\n");
 
-        printf("\nlA=%d cA=%d lB=%d cB=%d\n", matA.r, matA.c, matB.r, matB.c);
+        printf("\nlA=%d cA=%d lB=%d cB=%d lC=%d cC=%d\n", matA.r, matA.c, matB.r, matB.c, matC.r, matC.c);
 
         printf("\nDigite sua opcao: ");
 
@@ -54,155 +55,61 @@ int main(void){
         case 1:
 
             matDim(&matA);
-
             break;
 
         case 2:
 
             matDim(&matB);
-
             break;
 
         case 3:
 
             matInit(&matA);
-
             break;
 
         case 4:
 
             matInit(&matB);
-
             break;
 
         case 5:
 
             matAtrib(&matA);
-            system("cls");
-
             break;
 
         case 6:
 
             matAtrib(&matB);
-            system("cls");
-
             break;
 
         case 7:
 
-            if(matA.r == matB.r && matA.c == matB.c){
-
-                matSum(&matA,&matB,&matC);
-
-            }
-
-            else{
-
-                printf("As matrizes nao podem ser somadas pois suas dimensoes sao diferentes!\n");
-
-                system("pause");
-                system("cls");
-
-            }
-
+            matSum(&matA,&matB,&matC);
             break;
 
         case 8:
 
-            if(matA.r == matB.r && matA.c == matB.c){
-
-                matSub(&matA,&matB,&matC);
-
-            }
-
-            else{
-
-                printf("As matrizes nao podem ser subtraidas pois suas dimensoes sao diferentes!\n");
-
-                system("pause");
-                system("cls");
-
-            }
-
+            matSub(&matA,&matB,&matC);
             break;
 
         case 9:
 
-            if(matA.c == matB.r){
-
-                matProd(&matA,&matB,&matC);
-
-            }
-
-            else{
-
-                printf("As matrizes nao podem ser multiplicadas pois o numero de colunas da primeira e diferente do numero de linhas da segunda!\n");
-                system("pause");
-                system("cls");
-
-            }
-
+            matProd(&matA,&matB,&matC);
             break;
 
         case 10:
 
-            if (matA.r != 0 || matA.c != 0){
-
-                matPrint(&matA);
-                system("pause");
-                system("cls");
-
-            }
-
-            else{
-
-                printf("Primeiro defina as dimensoes da matriz A!\n");
-                system("pause");
-                system("cls");
-
-            }
-
+            matPrint(&matA);
             break;
 
         case 11:
 
-            if (matB.r != 0 || matB.c != 0){
-
-                matPrint(&matB);
-                system("pause");
-                system("cls");
-
-            }
-
-            else{
-
-                printf("Primeiro defina as dimensoes da matriz B!\n");
-                system("pause");
-                system("cls");
-
-            }
-
+            matPrint(&matB);
             break;
 
         case 12:
 
-            if (matC.r != 0 || matC.c != 0){
-
-                matPrint(&matC);
-                system("pause");
-                system("cls");
-
-            }
-
-            else{
-
-                printf("Primeiro realize alguma operacao entre as matrizes A e B!\n");
-                system("pause");
-                system("cls");
-
-            }
-
+            matPrint(&matC);
             break;
 
         case 13:
@@ -217,24 +124,22 @@ int main(void){
 
         case 15:
 
-            //matWrite(matC)
+            matWrite(&matC);
+
             break;
 
         case 16:
 
             sair = 1;
+            printf("OBRIGADO POR UTILIZAR O MATCALC!\n\n");
             break;
 
         default:
 
             printf("Opcao invalida! Escolha novamente.\n");
-            system("pause");
+            Sleep(3000);
             system("cls");
-
         }
-
     }
-
     return 0;
-
 }

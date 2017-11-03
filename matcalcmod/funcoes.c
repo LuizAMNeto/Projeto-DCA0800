@@ -3,8 +3,11 @@
 #include <stdlib.h>
 #include <time.h>
 #include <string.h>
+#include <windows.h>
 
+#define DIM_MIN 1
 #define DIM_MAX 20
+#define DELAY 2500
 
 /**
  * @brief matDim "Dimensiona o tamanho da matriz a partir de dois valores inteiros fornecidos pelo usuário."
@@ -16,11 +19,24 @@ void matDim(matriz *m){
 
     int i, j;
 
-    printf("Defina a quantidade de linhas: ");
-    scanf("%d", &m->r);
+    do {
 
-    printf("Defina a quantidade de colunas: ");
-    scanf("%d", &m->c);
+        printf("Defina a quantidade de linhas: ");
+        scanf("%d", &m->r);
+
+        printf("Defina a quantidade de colunas: ");
+        scanf("%d", &m->c);
+
+        if ((m->r > DIM_MAX || m->c > DIM_MAX) || (m->r < DIM_MIN || m->c < DIM_MIN)){
+
+            system("cls");
+            printf("Defina o valor das linhas e colunas no intervalo [1,20]!\n");
+            Sleep(DELAY);
+            system("cls");
+
+        }
+
+    }while((m->r > DIM_MAX || m->c > DIM_MAX) || (m->r < DIM_MIN || m->c < DIM_MIN));
 
     for(i=0 ; i < m->r ; i++){
         for(j=0 ; j < m->c ; j++){
@@ -40,19 +56,29 @@ void matDim(matriz *m){
 
 void matInit(matriz *m){
 
-    srand(time(NULL));
+    if (m->r != 0 || m->c != 0){
 
-    int i, j;
+        srand(time(NULL));
 
-    for(i=0 ; i < m->r ; i++){
-        for(j=0 ; j < m->c ; j++){
+        int i, j;
 
-            m->mat[i][j] = 10.00*((float)(rand())/RAND_MAX);
+        for(i=0 ; i < m->r ; i++){
+            for(j=0 ; j < m->c ; j++){
+
+                m->mat[i][j] = 10.00*((float)(rand())/RAND_MAX);
+            }
         }
+        printf("Operacao realizada! Vizualize o resultado no menu.\n");
+        Sleep(DELAY);
+        system("cls");
     }
-    printf("Operacao realizada! Vizualize o resultado no menu.\n");
-    system("pause");
-    system("cls");
+
+    else{
+
+        printf("Primeiro dimensione a matriz!\n");
+        Sleep(DELAY);
+        system("cls");
+    }
 }
 
 /**
@@ -62,15 +88,26 @@ void matInit(matriz *m){
 
 void matPrint (matriz *m){
 
-    int i, j;
+    if (m->r != 0 || m->c != 0){
 
-    for(i=0 ; i < m->r ; i++){
-        for(j=0 ; j < m->c ; j++){
+        int i, j;
 
-            printf ("%0.2f ", m->mat[i][j]);
+        for(i=0 ; i < m->r ; i++){
+            for(j=0 ; j < m->c ; j++){
 
+                printf ("%0.2f ", m->mat[i][j]);
+
+            }
+            printf("\n\n");
         }
-        printf("\n\n");
+        system("pause");
+        system("cls");
+    }
+
+    else{
+        printf("Primeiro defina a matriz!\n");
+        Sleep(3000);
+        system("cls");
     }
 }
 
@@ -81,14 +118,26 @@ void matPrint (matriz *m){
 
 void matAtrib(matriz *m){
 
-    int i, j;
+    if (m->r != 0 || m->c != 0){
 
-    for(i=0 ; i < m->r ; i++){
-        for(j=0 ; j < m->c ; j++){
+        int i, j;
 
-            printf("Atribua um valor para a entrada %d x %d:", i+1, j+1);
-            scanf("%f", &m->mat[i][j]);
+        for(i=0 ; i < m->r ; i++){
+            for(j=0 ; j < m->c ; j++){
+
+                printf("Atribua um valor para a entrada %d x %d:", i+1, j+1);
+                scanf("%f", &m->mat[i][j]);
+            }
         }
+        system("cls");
+    }
+
+    else{
+
+        printf("Primeiro dimensione a matriz!\n");
+        Sleep(DELAY);
+        system("cls");
+
     }
 }
 
@@ -101,21 +150,39 @@ void matAtrib(matriz *m){
 
 void matSum(matriz *mA, matriz *mB, matriz *mC){
 
-    int i, j;
-
-    mC->r = mA->r;
-    mC->c = mA->c;
-
-    for(i=0 ; i < mA->r ; i++){
-        for(j=0 ; j < mA->c ; j++){
-
-            mC->mat[i][j] = mA->mat[i][j] + mB->mat[i][j];
-        }
+    if((mA->r == 0 || mA->c == 0)||(mB->r == 0 || mB->c == 0)){
+        printf("Primeiro dimensione adequadamente as matrizes A e B!\n");
+        Sleep(DELAY);
+        system("cls");
     }
 
-    printf("Operacao realizada! Vizualize o resultado no menu.\n");
-    system("pause");
-    system("cls");
+    else if(mA->r == mB->r && mA->c == mB->c){
+
+        int i, j;
+
+        mC->r = mA->r;
+        mC->c = mA->c;
+
+        for(i=0 ; i < mA->r ; i++){
+            for(j=0 ; j < mA->c ; j++){
+
+                mC->mat[i][j] = mA->mat[i][j] + mB->mat[i][j];
+            }
+        }
+
+        printf("Operacao realizada! Vizualize o resultado no menu.\n");
+        Sleep(DELAY);
+        system("cls");
+
+    }
+
+    else{
+
+        printf("As matrizes nao podem ser somadas pois suas dimensoes sao diferentes!\n");
+        Sleep(DELAY);
+        system("cls");
+
+    }
 }
 
 /**
@@ -127,20 +194,39 @@ void matSum(matriz *mA, matriz *mB, matriz *mC){
 
 void matSub(matriz *mA, matriz *mB, matriz *mC){
 
-    int i, j;
-
-    mC->r = mA->r;
-    mC->c = mA->c;
-
-    for(i=0 ; i < mA->r ; i++){
-        for(j=0 ; j < mA->c ; j++){
-
-            mC->mat[i][j] = mA->mat[i][j] - mB->mat[i][j];
-        }
+    if((mA->r == 0 || mA->c == 0)||(mB->r == 0 || mB->c == 0)){
+        printf("Primeiro dimensione adequadamente as matrizes A e B!\n");
+        Sleep(DELAY);
+        system("cls");
     }
-    printf("Operacao realizada! Vizualize o resultado no menu.\n");
-    system("pause");
-    system("cls");
+
+    else if(mA->r == mB->r && mA->c == mB->c){
+
+        int i, j;
+
+        mC->r = mA->r;
+        mC->c = mA->c;
+
+        for(i=0 ; i < mA->r ; i++){
+            for(j=0 ; j < mA->c ; j++){
+
+                mC->mat[i][j] = mA->mat[i][j] - mB->mat[i][j];
+            }
+        }
+
+        printf("Operacao realizada! Vizualize o resultado no menu.\n");
+        Sleep(DELAY);
+        system("cls");
+
+    }
+
+    else{
+
+        printf("As matrizes nao podem ser subtraidas pois suas dimensoes sao diferentes!\n");
+        Sleep(DELAY);
+        system("cls");
+
+    }
 }
 
 /**
@@ -152,24 +238,45 @@ void matSub(matriz *mA, matriz *mB, matriz *mC){
 
 void matProd(matriz *mA, matriz *mB, matriz *mC){
 
-    int i, j, k;
+    if((mA->r == 0 || mA->c == 0)||(mB->r == 0 || mB->c == 0)){
+        printf("Primeiro dimensione adequadamente as matrizes A e B!\n");
+        Sleep(DELAY);
+        system("cls");
+    }
 
-    mC->r = mA->r;
-    mC->c = mB->c;
+    else if(mA->c == mB->r){
 
-    for(i=0 ; i < mA->r ; i++){
-        for(j=0 ; j < mB->c ; j++){
-            mC->mat[i][j] = 0;
-            for(k=0;k<mB->r;k++){
-                mC->mat[i][j] = mC->mat[i][j] + (mA->mat[i][k]*mB->mat[k][j]);
+        int i, j, k;
 
+        mC->r = mA->r;
+        mC->c = mB->c;
+
+        for(i=0 ; i < mA->r ; i++){
+            for(j=0 ; j < mB->c ; j++){
+                mC->mat[i][j] = 0;
+                for(k=0;k<mB->r;k++){
+                    mC->mat[i][j] = mC->mat[i][j] + (mA->mat[i][k]*mB->mat[k][j]);
+
+                }
             }
         }
+        printf("Operacao realizada! Vizualize o resultado no menu.\n");
+        Sleep(DELAY);
+        system("cls");
     }
-    printf("Operacao realizada! Vizualize o resultado no menu.\n");
-    system("pause");
-    system("cls");
+
+    else{
+        printf("As matrizes nao podem ser multiplicadas pois o numero de colunas da primeira e diferente do numero de linhas da segunda!\n");
+        Sleep(DELAY);
+        system("cls");
+    }
 }
+
+/**
+ * @brief matRead "Le uma matriz a partir de um arquivo de texto, considerando a quantidade de linhas e colunas."
+ * @param m
+ * @param sel
+ */
 
 void matRead(matriz *m, char sel){
 
@@ -227,11 +334,43 @@ void matRead(matriz *m, char sel){
     fclose(file);
 
     printf("Matriz lida com sucesso!\n");
-    system("pause");
+    Sleep(DELAY);
     system("cls");
 }
 
-/*void matWrite(matriz *m){
+/**
+ * @brief matWrite "Escreve uma matriz em um arquivo de texto(.txt)."
+ * @param m
+ */
 
+void matWrite(matriz *m){
 
-}*/
+    if (m->r != 0 || m->c != 0){
+
+        FILE *file;
+        int i,j;
+
+        file = fopen("matriz_c.txt", "w");
+
+        for(i=0 ; i < m->r ; i++){
+            for(j=0 ; j < m->c ; j++){
+
+                fprintf(file, "%0.2f ", m->mat[i][j]);
+            }
+            fprintf(file, "\n");
+        }
+
+        fclose(file);
+
+        printf("Arquivo criado com sucesso!\n");
+        Sleep(DELAY);
+        system("cls");
+
+    }
+
+    else{
+        printf("Primeiro realize alguma operacao entre as matrizes A e B!\n");
+        Sleep(DELAY);
+        system("cls");
+    }
+}
