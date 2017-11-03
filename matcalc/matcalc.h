@@ -2,18 +2,31 @@
 #define MATCALC_H
 #define DIM_MAX 20
 
-void matDim(int *, int *);
+typedef struct{
 
-void matInit(int, int, float [][DIM_MAX]);
+    float mat [DIM_MAX][DIM_MAX];
+    int r;
+    int c;
+    char d;
 
-void matPrint (int, int, float [][DIM_MAX]);
+}matriz;
 
-void matAtrib(int, int, float [][DIM_MAX]);
+void matDim(matriz *);
 
-void matSum(float [][DIM_MAX], float [][DIM_MAX], float [][DIM_MAX], int, int);
+void matInit(matriz *);
 
-void matSub(float [][DIM_MAX], float [][DIM_MAX], float [][DIM_MAX], int, int);
+void matPrint (matriz *);
 
-void matProd(float [][DIM_MAX], float [][DIM_MAX], float [][DIM_MAX], int, int, int);
+void matAtrib(matriz *);
+
+void matSum(matriz *, matriz *, matriz *);
+
+void matSub(matriz *, matriz *, matriz *);
+
+void matProd(matriz *, matriz *, matriz *);
+
+void matRead(matriz *);
+
+void matWrite(matriz *);
 
 #endif // MATCALC_H

@@ -2,20 +2,28 @@
 #include <stdlib.h>
 #include <conio.h>
 #include <matcalc.h>
+#include <windows.h>
 
 #define DIM_MAX 20
+#define DELAY 2500
 
 int main(void){
 
-    float matA[DIM_MAX][DIM_MAX];
-    float matB[DIM_MAX][DIM_MAX];
-    float matC[DIM_MAX][DIM_MAX];
+    typedef struct{
 
-    int lA=0, cA=0;
-    int lB=0, cB=0;
-    int lC, cC;
+        float mat [DIM_MAX][DIM_MAX];
+        int r;
+        int c;
+        char d;
+
+    }matriz;
+
+    matriz matA, matB, matC;
     int sair = 0;
     int opcao;
+
+    matA.r = 0; matA.c = 0; matB.r=0; matB.c = 0; matC.r=0; matC.c = 0;
+    matA.d = 'A'; matB.d = 'B'; matC.d = 'C';
 
     while(sair == 0){
 
@@ -32,9 +40,12 @@ int main(void){
         printf("(10) Imprimir matriz A\n");
         printf("(11) Imprimir matriz B\n");
         printf("(12) Imprimir matriz C\n");
-        printf("(13) Sair\n");
+        printf("(13) Ler a matriz A de um arquivo\n");
+        printf("(14) Ler a matriz B de um arquivo\n");
+        printf("(15) Escrever a matriz C em um arquivo\n");
+        printf("(16) Sair\n");
 
-        printf("\nlA=%d cA=%d lB=%d cB=%d\n", lA, cA, lB, cB);
+        printf("\nlA=%d cA=%d lB=%d cB=%d lC=%d cC=%d\n", matA.r, matA.c, matB.r, matB.c, matC.r, matC.c);
 
         printf("\nDigite sua opcao: ");
 
@@ -46,146 +57,92 @@ int main(void){
 
         case 1:
 
-            matDim(&lA, &cA);
-
+            matDim(&matA);
             break;
 
         case 2:
 
-            matDim(&lB, &cB);
-
+            matDim(&matB);
             break;
 
         case 3:
 
-            matInit(lA, cA, matA);
-
+            matInit(&matA);
             break;
 
         case 4:
 
-            matInit(lB, cB, matB);
-
+            matInit(&matB);
             break;
 
         case 5:
 
-            matAtrib(lA, cA, matA);
-            system("cls");
-
+            matAtrib(&matA);
             break;
 
         case 6:
 
-            matAtrib(lB, cB, matB);
-            system("cls");
-
+            matAtrib(&matB);
             break;
 
         case 7:
 
-            if(lA == lB && cA == cB){
-
-                lC = lA;
-                cC = cA;
-
-                matSum(matA,matB,matC,lC,cC);
-
-            }
-
-            else{
-
-                printf("As matrizes nao podem ser somadas pois suas dimensoes sao diferentes!\n");
-
-                system("pause");
-                system("cls");
-
-            }
-
+            matSum(&matA,&matB,&matC);
             break;
 
         case 8:
 
-            if(lA == lB && cA == cB){
-
-                lC = lA;
-                cC = cA;
-
-                matSub(matA,matB,matC,lC,cC);
-
-            }
-
-            else{
-
-                printf("As matrizes nao podem ser subtraidas pois suas dimensoes sao diferentes!\n");
-
-                system("pause");
-                system("cls");
-
-            }
-
+            matSub(&matA,&matB,&matC);
             break;
 
         case 9:
 
-            if(cA == lB){
-
-                lC = lA;
-                cC = cB;
-
-                matProd(matA,matB,matC,lC,cC,cA);
-
-            }
-
-            else{
-
-                printf("As matrizes nao podem ser multiplicadas pois o numero de colunas da primeira e diferente do numero de linhas da segunda!\n");
-                system("pause");
-                system("cls");
-
-            }
-
+            matProd(&matA,&matB,&matC);
             break;
 
         case 10:
 
-            matPrint(lA, cA, matA);
-            system("pause");
-            system("cls");
-
+            matPrint(&matA);
             break;
 
         case 11:
 
-            matPrint(lB, cB, matB);
-            system("pause");
-            system("cls");
-
+            matPrint(&matB);
             break;
 
         case 12:
 
-            matPrint(lC, cC, matC);
-            system("pause");
-            system("cls");
-
+            matPrint(&matC);
             break;
 
         case 13:
 
+            matRead(&matA);
+            break;
+
+        case 14:
+
+            matRead(&matB);
+            break;
+
+        case 15:
+
+            matWrite(&matC);
+
+            break;
+
+        case 16:
+
             sair = 1;
+            printf("OBRIGADO POR UTILIZAR O MATCALC!\n\n");
             break;
 
         default:
 
             printf("Opcao invalida! Escolha novamente.\n");
-            system("pause");
+            Sleep(DELAY);
             system("cls");
-
         }
-
     }
-
     return 0;
-
 }
