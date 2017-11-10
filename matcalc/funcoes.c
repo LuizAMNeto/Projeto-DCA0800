@@ -50,7 +50,11 @@ void matDim(matriz *m){
 }
 
 /**
+<<<<<<< HEAD
  * @brief matInit "Atribui valores aleatórios, de um intervalo definido pelo usuário, as entradas de qualquer matriz fonecida."
+=======
+ * @brief matInit "Atribui valores aleatórios entre 0.00 e 10.00 as entradas de qualquer matriz fonecida."
+>>>>>>> c972bcd2c4cde44d891f5cf4efb83fba0b950694
  * @param m "Uma váriavel do tipo 'matriz' recebida pela função."
  */
 
@@ -224,7 +228,6 @@ void matSub(matriz *mA, matriz *mB, matriz *mC){
         printf("Operacao realizada! Vizualize o resultado no menu.\n");
         Sleep(DELAY);
         system("cls");
-
     }
 
     else{
@@ -232,7 +235,6 @@ void matSub(matriz *mA, matriz *mB, matriz *mC){
         printf("As matrizes %c e %c nao podem ser subtraidas pois suas dimensoes sao diferentes!\n", mA->d, mB->d);
         Sleep(DELAY);
         system("cls");
-
     }
 }
 
