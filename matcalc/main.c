@@ -45,7 +45,7 @@ int main(void){
         printf("(15) Escrever a matriz C em um arquivo\n");
         printf("(16) Sair\n");
 
-        printf("\nlA=%d cA=%d lB=%d cB=%d lC=%d cC=%d\n", matA.r, matA.c, matB.r, matB.c, matC.r, matC.c);
+        //printf("\nlA=%d cA=%d lB=%d cB=%d lC=%d cC=%d\n", matA.r, matA.c, matB.r, matB.c, matC.r, matC.c);
 
         printf("\nDigite sua opcao: ");
 
