@@ -11,8 +11,8 @@
 
 /**
  * @brief matDim "Dimensiona o tamanho da matriz a partir de dois valores inteiros fornecidos pelo usuário."
- * @param r
- * @param c
+ * @param r "Representa o número de linhas da matriz recebida pela função."
+ * @param c "Representa o número de colunas da matriz recebida pela função."
  */
 
 void matDim(matriz *m){
@@ -50,8 +50,8 @@ void matDim(matriz *m){
 }
 
 /**
- * @brief matInit "Atribui valores aleatórios entre 0.00 e 10.00 as entradas de qualquer matriz fonecida."
- * @param m
+ * @brief matInit "Atribui valores aleatórios, de um intervalo definido pelo usuário, as entradas de qualquer matriz fonecida."
+ * @param m "Uma váriavel do tipo 'matriz' recebida pela função."
  */
 
 void matInit(matriz *m){
@@ -61,11 +61,18 @@ void matInit(matriz *m){
         srand(time(NULL));
 
         int i, j;
+        float a,b;
+
+        printf("Defina o intervalo de valores aleatorios ]a,b[ separado por virgula: ");
+        scanf("%f", &a);
+        getchar();
+        scanf("%f", &b);
+        system("cls");
 
         for(i=0 ; i < m->r ; i++){
             for(j=0 ; j < m->c ; j++){
 
-                m->mat[i][j] = 10.00*((float)(rand())/RAND_MAX);
+                m->mat[i][j] = a+rand()*(b-a)/RAND_MAX;
             }
         }
         printf("Operacao realizada! Vizualize o resultado no menu.\n");
@@ -83,7 +90,7 @@ void matInit(matriz *m){
 
 /**
  * @brief matPrint "Exibe na tela os valores de uma matriz fornecida."
- * @param m
+ * @param m "Uma váriavel do tipo 'matriz' recebida pela função."
  */
 
 void matPrint (matriz *m){
@@ -113,7 +120,7 @@ void matPrint (matriz *m){
 
 /**
  * @brief matAtrib "Permite que o usuário atribua valores manualmente as entradas de uma matriz fornecida."
- * @param m
+ * @param m "Uma váriavel do tipo 'matriz' recebida pela função."
  */
 
 void matAtrib(matriz *m){
@@ -143,9 +150,9 @@ void matAtrib(matriz *m){
 
 /**
  * @brief matSum "Soma valores correspondentes de duas matrizes fornecidas, atribuindo os valores a uma matriz resultante."
- * @param mA
- * @param mB
- * @param mC
+ * @param mA "Uma váriavel do tipo 'matriz' recebida pela função."
+ * @param mB "Uma váriavel do tipo 'matriz' recebida pela função."
+ * @param mC "Uma váriavel do tipo 'matriz' recebida pela função."
  */
 
 void matSum(matriz *mA, matriz *mB, matriz *mC){
@@ -187,9 +194,9 @@ void matSum(matriz *mA, matriz *mB, matriz *mC){
 
 /**
  * @brief matSub "Subtrai valores correspondentes de duas matrizes fornecidas, atribuindo os valores a uma matriz resultante."
- * @param mA
- * @param mB
- * @param mC
+ * @param mA "Uma váriavel do tipo 'matriz' recebida pela função."
+ * @param mB "Uma váriavel do tipo 'matriz' recebida pela função."
+ * @param mC "Uma váriavel do tipo 'matriz' recebida pela função."
  */
 
 void matSub(matriz *mA, matriz *mB, matriz *mC){
@@ -231,9 +238,9 @@ void matSub(matriz *mA, matriz *mB, matriz *mC){
 
 /**
  * @brief matProd "Efetua a operação de multiplicação entre duas matrizes, armazenando o produto em uma matriz resultante."
- * @param mA
- * @param mB
- * @param mC
+ * @param mA "Uma váriavel do tipo 'matriz' recebida pela função."
+ * @param mB "Uma váriavel do tipo 'matriz' recebida pela função."
+ * @param mC "Uma váriavel do tipo 'matriz' recebida pela função."
  */
 
 void matProd(matriz *mA, matriz *mB, matriz *mC){
@@ -274,8 +281,7 @@ void matProd(matriz *mA, matriz *mB, matriz *mC){
 
 /**
  * @brief matRead "Le uma matriz a partir de um arquivo de texto, considerando a quantidade de linhas e colunas."
- * @param m
- * @param sel
+ * @param m "Uma váriavel do tipo 'matriz' recebida pela função."
  */
 
 void matRead(matriz *m){
@@ -340,7 +346,7 @@ void matRead(matriz *m){
 
 /**
  * @brief matWrite "Escreve uma matriz em um arquivo de texto(.txt)."
- * @param m
+ * @param m "Uma váriavel do tipo 'matriz' recebida pela função."
  */
 
 void matWrite(matriz *m){
