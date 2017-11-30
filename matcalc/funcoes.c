@@ -8,12 +8,7 @@
 #define DIM_MIN 1
 #define DIM_MAX 20
 #define DELAY 2500
-
-/**
- * @brief matDim "Dimensiona o tamanho da matriz a partir de dois valores inteiros fornecidos pelo usuário."
- * @param r "Representa o número de linhas da matriz recebida pela função."
- * @param c "Representa o número de colunas da matriz recebida pela função."
- */
+#define LIM 100
 
 void matDim(matriz *m){
 
@@ -49,12 +44,6 @@ void matDim(matriz *m){
 
 }
 
-/**
- * @brief matInit "Atribui valores aleatórios, de um intervalo definido pelo usuário, as entradas de qualquer matriz fonecida."
- * @brief matInit "Atribui valores aleatórios entre 0.00 e 10.00 as entradas de qualquer matriz fonecida."
- * @param m "Uma váriavel do tipo 'matriz' recebida pela função."
- */
-
 void matInit(matriz *m){
 
     if (m->r != 0 || m->c != 0){
@@ -89,11 +78,6 @@ void matInit(matriz *m){
     }
 }
 
-/**
- * @brief matPrint "Exibe na tela os valores de uma matriz fornecida."
- * @param m "Uma váriavel do tipo 'matriz' recebida pela função."
- */
-
 void matPrint (matriz *m){
 
     if (m->r != 0 || m->c != 0){
@@ -119,11 +103,6 @@ void matPrint (matriz *m){
     }
 }
 
-/**
- * @brief matAtrib "Permite que o usuário atribua valores manualmente as entradas de uma matriz fornecida."
- * @param m "Uma váriavel do tipo 'matriz' recebida pela função."
- */
-
 void matAtrib(matriz *m){
 
     if (m->r != 0 || m->c != 0){
@@ -148,13 +127,6 @@ void matAtrib(matriz *m){
 
     }
 }
-
-/**
- * @brief matSum "Soma valores correspondentes de duas matrizes fornecidas, atribuindo os valores a uma matriz resultante."
- * @param mA "Uma váriavel do tipo 'matriz' recebida pela função."
- * @param mB "Uma váriavel do tipo 'matriz' recebida pela função."
- * @param mC "Uma váriavel do tipo 'matriz' recebida pela função."
- */
 
 void matSum(matriz *mA, matriz *mB, matriz *mC){
 
@@ -193,13 +165,6 @@ void matSum(matriz *mA, matriz *mB, matriz *mC){
     }
 }
 
-/**
- * @brief matSub "Subtrai valores correspondentes de duas matrizes fornecidas, atribuindo os valores a uma matriz resultante."
- * @param mA "Uma váriavel do tipo 'matriz' recebida pela função."
- * @param mB "Uma váriavel do tipo 'matriz' recebida pela função."
- * @param mC "Uma váriavel do tipo 'matriz' recebida pela função."
- */
-
 void matSub(matriz *mA, matriz *mB, matriz *mC){
 
     if((mA->r == 0 || mA->c == 0)||(mB->r == 0 || mB->c == 0)){
@@ -234,13 +199,6 @@ void matSub(matriz *mA, matriz *mB, matriz *mC){
         system("cls");
     }
 }
-
-/**
- * @brief matProd "Efetua a operação de multiplicação entre duas matrizes, armazenando o produto em uma matriz resultante."
- * @param mA "Uma váriavel do tipo 'matriz' recebida pela função."
- * @param mB "Uma váriavel do tipo 'matriz' recebida pela função."
- * @param mC "Uma váriavel do tipo 'matriz' recebida pela função."
- */
 
 void matProd(matriz *mA, matriz *mB, matriz *mC){
 
@@ -278,31 +236,24 @@ void matProd(matriz *mA, matriz *mB, matriz *mC){
     }
 }
 
-/**
- * @brief matRead "Le uma matriz a partir de um arquivo de texto, considerando a quantidade de linhas e colunas."
- * @param m "Uma váriavel do tipo 'matriz' recebida pela função."
- */
-
 void matRead(matriz *m){
 
     FILE *file;
     char ver;
+    char caminho[LIM];
     int i,j;
 
-    if (m->d == 'A'){
+    printf("Digite o caminho do arquivo: ");
+    fflush(stdin);
+    gets(caminho);
 
-        file = fopen("matriz_a.txt", "r");
-    }
-
-    else{
-
-        file = fopen("matriz_b.txt", "r");
-    }
+    file = fopen(caminho, "r");
 
     if(file == NULL){
 
         printf("Arquivo nao encontrado!\n");
-        Sleep(DELAY);
+        printf("Verifique se o caminho digitado esta correto -> %s\n\n", caminho);
+        system("pause");
         system("cls");
         return;
     }
@@ -311,8 +262,13 @@ void matRead(matriz *m){
     m->r = 0;
 
     while((ver=fgetc(file))!='\n'){
+
         if(ver == ' '){
             m->c++;
+        }
+
+        else if(ver == EOF){
+            break;
         }
     }
 
@@ -343,19 +299,19 @@ void matRead(matriz *m){
     system("cls");
 }
 
-/**
- * @brief matWrite "Escreve uma matriz em um arquivo de texto(.txt)."
- * @param m "Uma váriavel do tipo 'matriz' recebida pela função."
- */
-
 void matWrite(matriz *m){
 
     if (m->r != 0 || m->c != 0){
 
         FILE *file;
         int i,j;
+        char name[LIM];
 
-        file = fopen("matriz_c.txt", "w");
+        printf("Digite o nome do arquivo a ser salvo: ");
+        fflush(stdin);
+        gets(name);
+
+        file = fopen(name, "w");
 
         for(i=0 ; i < m->r ; i++){
             for(j=0 ; j < m->c ; j++){

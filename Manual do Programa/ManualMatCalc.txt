@@ -1,0 +1,153 @@
+﻿= Manual de Utilização do MatCalc®
+Doc Writer <luiz.a.neto@gmail.com>
+v1.0, 2017-12-01
+:lang: pt-BR
+:toc: left
+
+== O Programa
+
+O MatCalc® é um simples programa para realizar operações matemáticas básicas com matrizes, são elas: soma, subtração e multiplicação de matrizes.
+
+== A Interface do Usuário
+
+O MatCalc® possui uma interface simples e intuitiva. Basta selecionar a opção
+no menu digitando o número que a acompanha. Um modelo do menu é apresentado
+a seguir:
+
+PROGRAMA DE MANIPULACAO DE MATRIZES
+
+(1) Definir o tamanho da matriz A
+
+(2) Definir o tamanho da matriz B
+
+(3) Preencher a matriz A com valores aleatórios
+
+(4) Preencher a matriz B com valores aleatórios
+
+(5) Atribuir valores manualmente para os elementos da matriz A
+
+(6) Atribuir valores manualmente para os elementos da matriz B
+
+(7) Calcular A+B
+
+(8) Calcular A-B
+
+(9) Calcular A*B
+
+(10) Imprimir matriz A
+
+(11) Imprimir matriz B
+
+(12) Imprimir matriz C
+
+(13) Ler a matriz A de um arquivo
+
+(14) Ler a matriz B de um arquivo
+
+(15) Escrever a matriz C em um arquivo
+
+(16) Sair
+
+digite sua operacao:
+
+== As Rotinas
+
+:toc:
+
+* (1) Definir o tamanho da matriz A
+	
+Dimensiona a matriz A, com dimensão máxima de até 20 linhas e 20 colunas. 
+
+WARNING: O programa alertará o usuário caso valores inadequados sejam inseridos.
+
+* (2) Definir o tamanho da matriz B
+
+Dimensiona a matriz B, com dimensão máxima de até 20 linhas e 20 colunas. 
+
+WARNING: O programa alertará o usuário caso valores inadequados sejam inseridos.
+
+* (3) Preencher a matriz A com valores aleatórios
+
+Realiza o preenchimento da matriz A com valores aleatórios, em um intervalo definido pelo usuário. 
+
+NOTE: Os valores são gerados em ponto flutuante, com duas casas decimais.
+
+* (4) Preencher a matriz B com valores aleatórios
+
+Realiza o preenchimento da matriz A com valores aleatórios, em um intervalo definido pelo usuário. 
+
+NOTE: Os valores são gerados em ponto flutuante, com duas casas decimais.
+
+* (5) Atribuir valores manualmente para os elementos da matriz A
+
+Permite que o usuário atribua, manualmente, valores a cada uma das entradas da matriz A.
+
+* (6) Atribuir valores manualmente para os elementos da matriz B
+
+Permite que o usuário atribua, manualmente, valores a cada uma das entradas da matriz B.
+
+* (7) Calcular A+B
+
+A função "Calcular A+B" efetua a soma das matrizes.
+
+WARNING: O programa somente efetuará a operação se a quantidade de linhas e colunas das matrizes A e B forem iguais, caso contrário, uma mensagem de alerta
+será exibida.
+
+* (8) Calcular A-B
+
+A função "Calcular A-B" efetua a subtração das matrizes.
+
+WARNING: O programa somente efetuará a operação se a quantidade de linhas e colunas das matrizes A e B forem iguais, caso contrário, uma mensagem de alerta
+será exibida.
+
+* (9) Calcular A*B
+
+A função "Calcular A*B" efetua a multiplicação das matrizes.
+
+WARNING: Para que as matrizes sejam multiplicadas, a quantidade de colunas de A deve ser igual a quantidade de linhas de B. 
+
+* (10) Imprimir matriz A
+
+Exibe na tela as entradas atribuídas a matriz A. 
+
+WARNING: Caso nenhum valor tenha sido atribuído a matriz, o programa
+alertará o usuário sobre o preenchimento da mesma.
+
+* (11) Imprimir matriz B
+
+Exibe na tela as entradas atribuídas a matriz B. 
+
+WARNING: Caso nenhum valor tenha sido atribuído a matriz, o programa
+alertará o usuário sobre o preenchimento da mesma.
+
+* (12) Imprimir matriz C
+
+Exibe na tela as entradas atribuídas a matriz C. 
+
+WARNING: Caso nenhuma operação entre as matrizes A e B tenha sido 
+realizada, o programa alertará o usuário sobre a necessidade de efetuar ao menos uma operação entre as mesmas
+para que a matriz C seja criada.
+
+* (13) Ler a matriz A de um arquivo
+
+Esta função permite que o usuário leia uma arquivo .txt, adequadamente formatado, e utilize seus valores para as entradas da matriz.
+
+WARNING: Caso o arquivo não exista ou o caminho esteja incorreto, o programa retornará uma mensagem indicando que o arquivo não foi encontrado.
+
+* (14) Ler a matriz B de um arquivo
+
+Esta função permite que o usuário leia uma arquivo .txt, adequadamente formatado, e utilize seus valores para as entradas da matriz.
+
+WARNING: Caso o arquivo não exista, o programa retornará uma mensagem indicando que o arquivo não foi encontrado.
+
+* (15) Escrever a matriz C em um arquivo
+
+Escreve a matriz C obtida em um arquivo .txt, no diretório de origem do programa.
+
+NOTE: Para utilizar esta função é necessário lembrar que para gerar a matriz C, operações entre as matrizes A e B devem
+ser realizadas primeiramente, caso contrário o programa retornará uma mensagem de aviso para que alguma operação seja
+efetuada. 
+
+* (16) Sair
+
+Encerra o MatCalc®.
