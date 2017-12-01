@@ -1,0 +1,522 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>MatCalc®: Referência do Arquivo D:/Neto/Projeto-DCA0800/matcalc/funcoes.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="Matriz_organizacao (1).png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">MatCalc®
+   &#160;<span id="projectnumber">1.00v</span>
+   </div>
+   <div id="projectbrief">Um programa simples para realizar operações com matrizes.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Busca');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Busca');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('funcoes_8c.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#define-members">Definições e Macros</a> &#124;
+<a href="#func-members">Funções</a>  </div>
+  <div class="headertitle">
+<div class="title">Referência do Arquivo funcoes.c</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;<a class="el" href="matcalc_8h_source.html">matcalc.h</a>&gt;</code><br />
+<code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &lt;stdlib.h&gt;</code><br />
+<code>#include &lt;time.h&gt;</code><br />
+<code>#include &lt;string.h&gt;</code><br />
+<code>#include &lt;windows.h&gt;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Definições e Macros</h2></td></tr>
+<tr class="memitem:ac6a4a96db8fc395a280a5cb6654d5651"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="funcoes_8c.html#ac6a4a96db8fc395a280a5cb6654d5651">DIM_MIN</a>&#160;&#160;&#160;1</td></tr>
+<tr class="separator:ac6a4a96db8fc395a280a5cb6654d5651"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4bf6f11165a23227af11f1d0d75798a4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="funcoes_8c.html#a4bf6f11165a23227af11f1d0d75798a4">DIM_MAX</a>&#160;&#160;&#160;20</td></tr>
+<tr class="separator:a4bf6f11165a23227af11f1d0d75798a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a62249e384b997229a3e2ae74ade334e2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="funcoes_8c.html#a62249e384b997229a3e2ae74ade334e2">DELAY</a>&#160;&#160;&#160;2500</td></tr>
+<tr class="separator:a62249e384b997229a3e2ae74ade334e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac3ddfb9af20a2dc934b0540be75f1241"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="funcoes_8c.html#ac3ddfb9af20a2dc934b0540be75f1241">LIM</a>&#160;&#160;&#160;100</td></tr>
+<tr class="separator:ac3ddfb9af20a2dc934b0540be75f1241"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Funções</h2></td></tr>
+<tr class="memitem:ad16e5e62f3579a7048e6b981b172885e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="funcoes_8c.html#ad16e5e62f3579a7048e6b981b172885e">menu</a> (void)</td></tr>
+<tr class="memdesc:ad16e5e62f3579a7048e6b981b172885e"><td class="mdescLeft">&#160;</td><td class="mdescRight">menu "Apenas exibe o menu do usuário."  <a href="#ad16e5e62f3579a7048e6b981b172885e">Mais...</a><br /></td></tr>
+<tr class="separator:ad16e5e62f3579a7048e6b981b172885e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2aa0cd0e9a01ec580a688ad199c6235"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="funcoes_8c.html#ab2aa0cd0e9a01ec580a688ad199c6235">matDim</a> (<a class="el" href="structmatriz.html">matriz</a> *m)</td></tr>
+<tr class="memdesc:ab2aa0cd0e9a01ec580a688ad199c6235"><td class="mdescLeft">&#160;</td><td class="mdescRight">matDim "Dimensiona o tamanho da matriz a partir de dois valores inteiros fornecidos pelo usuário."  <a href="#ab2aa0cd0e9a01ec580a688ad199c6235">Mais...</a><br /></td></tr>
+<tr class="separator:ab2aa0cd0e9a01ec580a688ad199c6235"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:accf1f10f50d86bd9e5cd8f7ce1886dae"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="funcoes_8c.html#accf1f10f50d86bd9e5cd8f7ce1886dae">matInit</a> (<a class="el" href="structmatriz.html">matriz</a> *m)</td></tr>
+<tr class="memdesc:accf1f10f50d86bd9e5cd8f7ce1886dae"><td class="mdescLeft">&#160;</td><td class="mdescRight">matInit "Atribui valores aleatórios, de um intervalo definido pelo usuário, as entradas de qualquer matriz fonecida."  <a href="#accf1f10f50d86bd9e5cd8f7ce1886dae">Mais...</a><br /></td></tr>
+<tr class="separator:accf1f10f50d86bd9e5cd8f7ce1886dae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa524b18d40acb94660108696b46c8d04"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="funcoes_8c.html#aa524b18d40acb94660108696b46c8d04">matPrint</a> (<a class="el" href="structmatriz.html">matriz</a> *m)</td></tr>
+<tr class="memdesc:aa524b18d40acb94660108696b46c8d04"><td class="mdescLeft">&#160;</td><td class="mdescRight">matPrint "Exibe na tela os valores de uma matriz fornecida."  <a href="#aa524b18d40acb94660108696b46c8d04">Mais...</a><br /></td></tr>
+<tr class="separator:aa524b18d40acb94660108696b46c8d04"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a6566491d9b2f4028e20f524c4563c9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="funcoes_8c.html#a4a6566491d9b2f4028e20f524c4563c9">matAtrib</a> (<a class="el" href="structmatriz.html">matriz</a> *m)</td></tr>
+<tr class="memdesc:a4a6566491d9b2f4028e20f524c4563c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">matAtrib "Permite que o usuário atribua valores manualmente as entradas de uma matriz fornecida."  <a href="#a4a6566491d9b2f4028e20f524c4563c9">Mais...</a><br /></td></tr>
+<tr class="separator:a4a6566491d9b2f4028e20f524c4563c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa6172774a6c36f9a722aef90863bae2c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="funcoes_8c.html#aa6172774a6c36f9a722aef90863bae2c">matSum</a> (<a class="el" href="structmatriz.html">matriz</a> *mA, <a class="el" href="structmatriz.html">matriz</a> *mB, <a class="el" href="structmatriz.html">matriz</a> *mC)</td></tr>
+<tr class="memdesc:aa6172774a6c36f9a722aef90863bae2c"><td class="mdescLeft">&#160;</td><td class="mdescRight">matSum "Soma valores correspondentes de duas matrizes fornecidas, atribuindo os valores a uma matriz resultante."  <a href="#aa6172774a6c36f9a722aef90863bae2c">Mais...</a><br /></td></tr>
+<tr class="separator:aa6172774a6c36f9a722aef90863bae2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c84435d76b6718067fe36878c610306"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="funcoes_8c.html#a6c84435d76b6718067fe36878c610306">matSub</a> (<a class="el" href="structmatriz.html">matriz</a> *mA, <a class="el" href="structmatriz.html">matriz</a> *mB, <a class="el" href="structmatriz.html">matriz</a> *mC)</td></tr>
+<tr class="memdesc:a6c84435d76b6718067fe36878c610306"><td class="mdescLeft">&#160;</td><td class="mdescRight">matSub "Subtrai valores correspondentes de duas matrizes fornecidas, atribuindo os valores a uma matriz resultante."  <a href="#a6c84435d76b6718067fe36878c610306">Mais...</a><br /></td></tr>
+<tr class="separator:a6c84435d76b6718067fe36878c610306"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af728a13cb2951013fde9f743752607bb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="funcoes_8c.html#af728a13cb2951013fde9f743752607bb">matProd</a> (<a class="el" href="structmatriz.html">matriz</a> *mA, <a class="el" href="structmatriz.html">matriz</a> *mB, <a class="el" href="structmatriz.html">matriz</a> *mC)</td></tr>
+<tr class="memdesc:af728a13cb2951013fde9f743752607bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">matProd "Efetua a operação de multiplicação entre duas matrizes, armazenando o produto em uma matriz resultante."  <a href="#af728a13cb2951013fde9f743752607bb">Mais...</a><br /></td></tr>
+<tr class="separator:af728a13cb2951013fde9f743752607bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a08b5fe41d26c5c6fd6f72b44071bb040"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="funcoes_8c.html#a08b5fe41d26c5c6fd6f72b44071bb040">matRead</a> (<a class="el" href="structmatriz.html">matriz</a> *m)</td></tr>
+<tr class="memdesc:a08b5fe41d26c5c6fd6f72b44071bb040"><td class="mdescLeft">&#160;</td><td class="mdescRight">matRead "Le uma matriz a partir de um arquivo de texto, considerando a quantidade de linhas e colunas."  <a href="#a08b5fe41d26c5c6fd6f72b44071bb040">Mais...</a><br /></td></tr>
+<tr class="separator:a08b5fe41d26c5c6fd6f72b44071bb040"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a023e0e385aad2d06ae85d50aef690e3b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="funcoes_8c.html#a023e0e385aad2d06ae85d50aef690e3b">matWrite</a> (<a class="el" href="structmatriz.html">matriz</a> *m)</td></tr>
+<tr class="memdesc:a023e0e385aad2d06ae85d50aef690e3b"><td class="mdescLeft">&#160;</td><td class="mdescRight">matWrite "Escreve uma matriz em um arquivo de texto(.txt)."  <a href="#a023e0e385aad2d06ae85d50aef690e3b">Mais...</a><br /></td></tr>
+<tr class="separator:a023e0e385aad2d06ae85d50aef690e3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Definições e macros</h2>
+<a id="a62249e384b997229a3e2ae74ade334e2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a62249e384b997229a3e2ae74ade334e2">&#9670;&nbsp;</a></span>DELAY</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DELAY&#160;&#160;&#160;2500</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4bf6f11165a23227af11f1d0d75798a4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4bf6f11165a23227af11f1d0d75798a4">&#9670;&nbsp;</a></span>DIM_MAX</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DIM_MAX&#160;&#160;&#160;20</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac6a4a96db8fc395a280a5cb6654d5651"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac6a4a96db8fc395a280a5cb6654d5651">&#9670;&nbsp;</a></span>DIM_MIN</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DIM_MIN&#160;&#160;&#160;1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac3ddfb9af20a2dc934b0540be75f1241"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac3ddfb9af20a2dc934b0540be75f1241">&#9670;&nbsp;</a></span>LIM</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LIM&#160;&#160;&#160;100</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Funções</h2>
+<a id="a4a6566491d9b2f4028e20f524c4563c9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4a6566491d9b2f4028e20f524c4563c9">&#9670;&nbsp;</a></span>matAtrib()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void matAtrib </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structmatriz.html">matriz</a> *&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>matAtrib "Permite que o usuário atribua valores manualmente as entradas de uma matriz fornecida." </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">m</td><td>"Uma váriavel do tipo 'matriz' recebida pela função." </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ab2aa0cd0e9a01ec580a688ad199c6235"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab2aa0cd0e9a01ec580a688ad199c6235">&#9670;&nbsp;</a></span>matDim()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void matDim </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structmatriz.html">matriz</a> *&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>matDim "Dimensiona o tamanho da matriz a partir de dois valores inteiros fornecidos pelo usuário." </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">r</td><td>"Representa o número de linhas da matriz recebida pela função." </td></tr>
+    <tr><td class="paramname">c</td><td>"Representa o número de colunas da matriz recebida pela função." </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="accf1f10f50d86bd9e5cd8f7ce1886dae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#accf1f10f50d86bd9e5cd8f7ce1886dae">&#9670;&nbsp;</a></span>matInit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void matInit </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structmatriz.html">matriz</a> *&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>matInit "Atribui valores aleatórios, de um intervalo definido pelo usuário, as entradas de qualquer matriz fonecida." </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">m</td><td>"Uma váriavel do tipo 'matriz' recebida pela função." </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aa524b18d40acb94660108696b46c8d04"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa524b18d40acb94660108696b46c8d04">&#9670;&nbsp;</a></span>matPrint()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void matPrint </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structmatriz.html">matriz</a> *&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>matPrint "Exibe na tela os valores de uma matriz fornecida." </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">m</td><td>"Uma váriavel do tipo 'matriz' recebida pela função." </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="af728a13cb2951013fde9f743752607bb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af728a13cb2951013fde9f743752607bb">&#9670;&nbsp;</a></span>matProd()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void matProd </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structmatriz.html">matriz</a> *&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structmatriz.html">matriz</a> *&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structmatriz.html">matriz</a> *&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>matProd "Efetua a operação de multiplicação entre duas matrizes, armazenando o produto em uma matriz resultante." </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mA</td><td>"Uma váriavel do tipo 'matriz' recebida pela função." </td></tr>
+    <tr><td class="paramname">mB</td><td>"Uma váriavel do tipo 'matriz' recebida pela função." </td></tr>
+    <tr><td class="paramname">mC</td><td>"Uma váriavel do tipo 'matriz' recebida pela função." </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a08b5fe41d26c5c6fd6f72b44071bb040"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a08b5fe41d26c5c6fd6f72b44071bb040">&#9670;&nbsp;</a></span>matRead()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void matRead </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structmatriz.html">matriz</a> *&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>matRead "Le uma matriz a partir de um arquivo de texto, considerando a quantidade de linhas e colunas." </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">m</td><td>"Uma váriavel do tipo 'matriz' recebida pela função." </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a6c84435d76b6718067fe36878c610306"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6c84435d76b6718067fe36878c610306">&#9670;&nbsp;</a></span>matSub()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void matSub </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structmatriz.html">matriz</a> *&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structmatriz.html">matriz</a> *&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structmatriz.html">matriz</a> *&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>matSub "Subtrai valores correspondentes de duas matrizes fornecidas, atribuindo os valores a uma matriz resultante." </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mA</td><td>"Uma váriavel do tipo 'matriz' recebida pela função." </td></tr>
+    <tr><td class="paramname">mB</td><td>"Uma váriavel do tipo 'matriz' recebida pela função." </td></tr>
+    <tr><td class="paramname">mC</td><td>"Uma váriavel do tipo 'matriz' recebida pela função." </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aa6172774a6c36f9a722aef90863bae2c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa6172774a6c36f9a722aef90863bae2c">&#9670;&nbsp;</a></span>matSum()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void matSum </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structmatriz.html">matriz</a> *&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structmatriz.html">matriz</a> *&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structmatriz.html">matriz</a> *&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>matSum "Soma valores correspondentes de duas matrizes fornecidas, atribuindo os valores a uma matriz resultante." </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mA</td><td>"Uma váriavel do tipo 'matriz' recebida pela função." </td></tr>
+    <tr><td class="paramname">mB</td><td>"Uma váriavel do tipo 'matriz' recebida pela função." </td></tr>
+    <tr><td class="paramname">mC</td><td>"Uma váriavel do tipo 'matriz' recebida pela função." </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a023e0e385aad2d06ae85d50aef690e3b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a023e0e385aad2d06ae85d50aef690e3b">&#9670;&nbsp;</a></span>matWrite()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void matWrite </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structmatriz.html">matriz</a> *&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>matWrite "Escreve uma matriz em um arquivo de texto(.txt)." </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">m</td><td>"Uma váriavel do tipo 'matriz' recebida pela função." </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ad16e5e62f3579a7048e6b981b172885e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad16e5e62f3579a7048e6b981b172885e">&#9670;&nbsp;</a></span>menu()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void menu </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>menu "Apenas exibe o menu do usuário." </p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_275089585c7fc1b5fd5d7d42c69cb1da.html">D:</a></li><li class="navelem"><a class="el" href="dir_3d49935144524591cdd27c077eb10866.html">Neto</a></li><li class="navelem"><a class="el" href="dir_87e2adf0929534f59aa2e7025430c8e6.html">Projeto-DCA0800</a></li><li class="navelem"><a class="el" href="dir_c9c037eccc17d2a7edb5bd0f7c2070a3.html">matcalc</a></li><li class="navelem"><a class="el" href="funcoes_8c.html">funcoes.c</a></li>
+    <li class="footer">Gerado por
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
+  </ul>
+</div>
+</body>
+</html>

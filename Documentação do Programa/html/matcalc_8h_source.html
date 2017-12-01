@@ -1,0 +1,116 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>MatCalc®: Código-Fonte de D:/Neto/Projeto-DCA0800/matcalc/matcalc.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="Matriz_organizacao (1).png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">MatCalc®
+   &#160;<span id="projectnumber">1.00v</span>
+   </div>
+   <div id="projectbrief">Um programa simples para realizar operações com matrizes.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Busca');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Busca');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('matcalc_8h_source.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">matcalc.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="matcalc_8h.html">Vá para a documentação deste arquivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef MATCALC_H</span></div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define MATCALC_H</span></div><div class="line"><a name="l00003"></a><span class="lineno"><a class="line" href="matcalc_8h.html#a4bf6f11165a23227af11f1d0d75798a4">    3</a></span>&#160;<span class="preprocessor">#define DIM_MAX 20</span></div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;</div><div class="line"><a name="l00005"></a><span class="lineno"><a class="line" href="structmatriz.html">    5</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct</span>{</div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;</div><div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="structmatriz.html#aeeb49c1202a8b505427fbdaaaff22528">    7</a></span>&#160;    <span class="keywordtype">float</span> mat [<a class="code" href="matcalc_8h.html#a4bf6f11165a23227af11f1d0d75798a4">DIM_MAX</a>][<a class="code" href="matcalc_8h.html#a4bf6f11165a23227af11f1d0d75798a4">DIM_MAX</a>];</div><div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="structmatriz.html#acab531abaa74a7e664e3986f2522b33a">    8</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="structmatriz.html#acab531abaa74a7e664e3986f2522b33a">r</a>;</div><div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="structmatriz.html#a4e1e0e72dd773439e333c84dd762a9c3">    9</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="structmatriz.html#a4e1e0e72dd773439e333c84dd762a9c3">c</a>;</div><div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="structmatriz.html#a74bec2657eaae3ead1db1abe05154d4a">   10</a></span>&#160;    <span class="keywordtype">char</span> <a class="code" href="structmatriz.html#a74bec2657eaae3ead1db1abe05154d4a">d</a>;</div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;}<a class="code" href="structmatriz.html">matriz</a>;</div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keywordtype">void</span> <a class="code" href="matcalc_8h.html#a2a0e843767aeea4f433a28b9c54f573a">menu</a>();</div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keywordtype">void</span> <a class="code" href="matcalc_8h.html#a8614bfef7efe7e4877131eaf63feabc3">matDim</a>(<a class="code" href="structmatriz.html">matriz</a> *);</div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="keywordtype">void</span> <a class="code" href="matcalc_8h.html#a5fe9025fa1f8e6508c60a0caaeaf7c76">matInit</a>(<a class="code" href="structmatriz.html">matriz</a> *);</div><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="keywordtype">void</span> <a class="code" href="matcalc_8h.html#ada9a682312fd4d033d2d26c0d4abe692">matPrint</a> (<a class="code" href="structmatriz.html">matriz</a> *);</div><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="keywordtype">void</span> <a class="code" href="matcalc_8h.html#a682b2ce85aecef047aebbf777f21698f">matAtrib</a>(<a class="code" href="structmatriz.html">matriz</a> *);</div><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div><div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="keywordtype">void</span> <a class="code" href="matcalc_8h.html#a7adbb234410616c3e792ae80ca178d31">matSum</a>(<a class="code" href="structmatriz.html">matriz</a> *, <a class="code" href="structmatriz.html">matriz</a> *, <a class="code" href="structmatriz.html">matriz</a> *);</div><div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div><div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="keywordtype">void</span> <a class="code" href="matcalc_8h.html#a2c7cbf84cffab529108f3e7e5dba7513">matSub</a>(<a class="code" href="structmatriz.html">matriz</a> *, <a class="code" href="structmatriz.html">matriz</a> *, <a class="code" href="structmatriz.html">matriz</a> *);</div><div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div><div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="keywordtype">void</span> <a class="code" href="matcalc_8h.html#a8af558b2950816adb8023bb9b4c4a29d">matProd</a>(<a class="code" href="structmatriz.html">matriz</a> *, <a class="code" href="structmatriz.html">matriz</a> *, <a class="code" href="structmatriz.html">matriz</a> *);</div><div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div><div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="keywordtype">void</span> <a class="code" href="matcalc_8h.html#a8fc344848c43570e03f79b163a5087a2">matRead</a>(<a class="code" href="structmatriz.html">matriz</a> *);</div><div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div><div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="keywordtype">void</span> <a class="code" href="matcalc_8h.html#a01085fcb0cb841f182f9027bf6e6d89d">matWrite</a>(<a class="code" href="structmatriz.html">matriz</a> *);</div><div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;</div><div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="preprocessor">#endif // MATCALC_H</span></div><div class="ttc" id="matcalc_8h_html_a8fc344848c43570e03f79b163a5087a2"><div class="ttname"><a href="matcalc_8h.html#a8fc344848c43570e03f79b163a5087a2">matRead</a></div><div class="ttdeci">void matRead(matriz *)</div><div class="ttdoc">matRead &quot;Le uma matriz a partir de um arquivo de texto, considerando a quantidade de linhas e colunas...</div><div class="ttdef"><b>Definition:</b> funcoes.c:262</div></div>
+<div class="ttc" id="matcalc_8h_html_a8614bfef7efe7e4877131eaf63feabc3"><div class="ttname"><a href="matcalc_8h.html#a8614bfef7efe7e4877131eaf63feabc3">matDim</a></div><div class="ttdeci">void matDim(matriz *)</div><div class="ttdoc">matDim &quot;Dimensiona o tamanho da matriz a partir de dois valores inteiros fornecidos pelo usuário...</div><div class="ttdef"><b>Definition:</b> funcoes.c:36</div></div>
+<div class="ttc" id="matcalc_8h_html_a2a0e843767aeea4f433a28b9c54f573a"><div class="ttname"><a href="matcalc_8h.html#a2a0e843767aeea4f433a28b9c54f573a">menu</a></div><div class="ttdeci">void menu()</div><div class="ttdoc">menu &quot;Apenas exibe o menu do usuário.&quot; </div><div class="ttdef"><b>Definition:</b> funcoes.c:13</div></div>
+<div class="ttc" id="structmatriz_html_a4e1e0e72dd773439e333c84dd762a9c3"><div class="ttname"><a href="structmatriz.html#a4e1e0e72dd773439e333c84dd762a9c3">matriz::c</a></div><div class="ttdeci">int c</div><div class="ttdef"><b>Definition:</b> matcalc.h:9</div></div>
+<div class="ttc" id="structmatriz_html_acab531abaa74a7e664e3986f2522b33a"><div class="ttname"><a href="structmatriz.html#acab531abaa74a7e664e3986f2522b33a">matriz::r</a></div><div class="ttdeci">int r</div><div class="ttdef"><b>Definition:</b> matcalc.h:8</div></div>
+<div class="ttc" id="matcalc_8h_html_a2c7cbf84cffab529108f3e7e5dba7513"><div class="ttname"><a href="matcalc_8h.html#a2c7cbf84cffab529108f3e7e5dba7513">matSub</a></div><div class="ttdeci">void matSub(matriz *, matriz *, matriz *)</div><div class="ttdoc">matSub &quot;Subtrai valores correspondentes de duas matrizes fornecidas, atribuindo os valores a uma matr...</div><div class="ttdef"><b>Definition:</b> funcoes.c:191</div></div>
+<div class="ttc" id="matcalc_8h_html_a5fe9025fa1f8e6508c60a0caaeaf7c76"><div class="ttname"><a href="matcalc_8h.html#a5fe9025fa1f8e6508c60a0caaeaf7c76">matInit</a></div><div class="ttdeci">void matInit(matriz *)</div><div class="ttdoc">matInit &quot;Atribui valores aleatórios, de um intervalo definido pelo usuário, as entradas de qualquer m...</div><div class="ttdef"><b>Definition:</b> funcoes.c:70</div></div>
+<div class="ttc" id="structmatriz_html_a74bec2657eaae3ead1db1abe05154d4a"><div class="ttname"><a href="structmatriz.html#a74bec2657eaae3ead1db1abe05154d4a">matriz::d</a></div><div class="ttdeci">char d</div><div class="ttdef"><b>Definition:</b> matcalc.h:10</div></div>
+<div class="ttc" id="structmatriz_html"><div class="ttname"><a href="structmatriz.html">matriz</a></div><div class="ttdef"><b>Definition:</b> matcalc.h:5</div></div>
+<div class="ttc" id="matcalc_8h_html_ada9a682312fd4d033d2d26c0d4abe692"><div class="ttname"><a href="matcalc_8h.html#ada9a682312fd4d033d2d26c0d4abe692">matPrint</a></div><div class="ttdeci">void matPrint(matriz *)</div><div class="ttdoc">matPrint &quot;Exibe na tela os valores de uma matriz fornecida.&quot; </div><div class="ttdef"><b>Definition:</b> funcoes.c:104</div></div>
+<div class="ttc" id="matcalc_8h_html_a4bf6f11165a23227af11f1d0d75798a4"><div class="ttname"><a href="matcalc_8h.html#a4bf6f11165a23227af11f1d0d75798a4">DIM_MAX</a></div><div class="ttdeci">#define DIM_MAX</div><div class="ttdef"><b>Definition:</b> matcalc.h:3</div></div>
+<div class="ttc" id="matcalc_8h_html_a7adbb234410616c3e792ae80ca178d31"><div class="ttname"><a href="matcalc_8h.html#a7adbb234410616c3e792ae80ca178d31">matSum</a></div><div class="ttdeci">void matSum(matriz *, matriz *, matriz *)</div><div class="ttdoc">matSum &quot;Soma valores correspondentes de duas matrizes fornecidas, atribuindo os valores a uma matriz ...</div><div class="ttdef"><b>Definition:</b> funcoes.c:154</div></div>
+<div class="ttc" id="matcalc_8h_html_a682b2ce85aecef047aebbf777f21698f"><div class="ttname"><a href="matcalc_8h.html#a682b2ce85aecef047aebbf777f21698f">matAtrib</a></div><div class="ttdeci">void matAtrib(matriz *)</div><div class="ttdoc">matAtrib &quot;Permite que o usuário atribua valores manualmente as entradas de uma matriz fornecida...</div><div class="ttdef"><b>Definition:</b> funcoes.c:129</div></div>
+<div class="ttc" id="matcalc_8h_html_a8af558b2950816adb8023bb9b4c4a29d"><div class="ttname"><a href="matcalc_8h.html#a8af558b2950816adb8023bb9b4c4a29d">matProd</a></div><div class="ttdeci">void matProd(matriz *, matriz *, matriz *)</div><div class="ttdoc">matProd &quot;Efetua a operação de multiplicação entre duas matrizes, armazenando o produto em uma matriz ...</div><div class="ttdef"><b>Definition:</b> funcoes.c:226</div></div>
+<div class="ttc" id="matcalc_8h_html_a01085fcb0cb841f182f9027bf6e6d89d"><div class="ttname"><a href="matcalc_8h.html#a01085fcb0cb841f182f9027bf6e6d89d">matWrite</a></div><div class="ttdeci">void matWrite(matriz *)</div><div class="ttdoc">matWrite &quot;Escreve uma matriz em um arquivo de texto(.txt).&quot; </div><div class="ttdef"><b>Definition:</b> funcoes.c:325</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_275089585c7fc1b5fd5d7d42c69cb1da.html">D:</a></li><li class="navelem"><a class="el" href="dir_3d49935144524591cdd27c077eb10866.html">Neto</a></li><li class="navelem"><a class="el" href="dir_87e2adf0929534f59aa2e7025430c8e6.html">Projeto-DCA0800</a></li><li class="navelem"><a class="el" href="dir_c9c037eccc17d2a7edb5bd0f7c2070a3.html">matcalc</a></li><li class="navelem"><a class="el" href="matcalc_8h.html">matcalc.h</a></li>
+    <li class="footer">Gerado por
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
+  </ul>
+</div>
+</body>
+</html>

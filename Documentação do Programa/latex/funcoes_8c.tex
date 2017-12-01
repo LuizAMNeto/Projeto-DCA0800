@@ -1,0 +1,231 @@
+\hypertarget{funcoes_8c}{}\section{Referência do Arquivo D\+:/\+Neto/\+Projeto-\/\+D\+C\+A0800/matcalc/funcoes.c}
+\label{funcoes_8c}\index{D\+:/\+Neto/\+Projeto-\/\+D\+C\+A0800/matcalc/funcoes.\+c@{D\+:/\+Neto/\+Projeto-\/\+D\+C\+A0800/matcalc/funcoes.\+c}}
+{\ttfamily \#include $<$matcalc.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$time.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$windows.\+h$>$}\newline
+\subsection*{Definições e Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{funcoes_8c_ac6a4a96db8fc395a280a5cb6654d5651}{D\+I\+M\+\_\+\+M\+IN}~1
+\item 
+\#define \hyperlink{funcoes_8c_a4bf6f11165a23227af11f1d0d75798a4}{D\+I\+M\+\_\+\+M\+AX}~20
+\item 
+\#define \hyperlink{funcoes_8c_a62249e384b997229a3e2ae74ade334e2}{D\+E\+L\+AY}~2500
+\item 
+\#define \hyperlink{funcoes_8c_ac3ddfb9af20a2dc934b0540be75f1241}{L\+IM}~100
+\end{DoxyCompactItemize}
+\subsection*{Funções}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{funcoes_8c_ad16e5e62f3579a7048e6b981b172885e}{menu} (void)
+\begin{DoxyCompactList}\small\item\em menu \char`\"{}\+Apenas exibe o menu do usuário.\char`\"{} \end{DoxyCompactList}\item 
+void \hyperlink{funcoes_8c_ab2aa0cd0e9a01ec580a688ad199c6235}{mat\+Dim} (\hyperlink{structmatriz}{matriz} $\ast$m)
+\begin{DoxyCompactList}\small\item\em mat\+Dim \char`\"{}\+Dimensiona o tamanho da matriz a partir de dois valores inteiros fornecidos pelo usuário.\char`\"{} \end{DoxyCompactList}\item 
+void \hyperlink{funcoes_8c_accf1f10f50d86bd9e5cd8f7ce1886dae}{mat\+Init} (\hyperlink{structmatriz}{matriz} $\ast$m)
+\begin{DoxyCompactList}\small\item\em mat\+Init \char`\"{}\+Atribui valores aleatórios, de um intervalo definido pelo usuário, as entradas de qualquer matriz fonecida.\char`\"{} \end{DoxyCompactList}\item 
+void \hyperlink{funcoes_8c_aa524b18d40acb94660108696b46c8d04}{mat\+Print} (\hyperlink{structmatriz}{matriz} $\ast$m)
+\begin{DoxyCompactList}\small\item\em mat\+Print \char`\"{}\+Exibe na tela os valores de uma matriz fornecida.\char`\"{} \end{DoxyCompactList}\item 
+void \hyperlink{funcoes_8c_a4a6566491d9b2f4028e20f524c4563c9}{mat\+Atrib} (\hyperlink{structmatriz}{matriz} $\ast$m)
+\begin{DoxyCompactList}\small\item\em mat\+Atrib \char`\"{}\+Permite que o usuário atribua valores manualmente as entradas de uma matriz fornecida.\char`\"{} \end{DoxyCompactList}\item 
+void \hyperlink{funcoes_8c_aa6172774a6c36f9a722aef90863bae2c}{mat\+Sum} (\hyperlink{structmatriz}{matriz} $\ast$mA, \hyperlink{structmatriz}{matriz} $\ast$mB, \hyperlink{structmatriz}{matriz} $\ast$mC)
+\begin{DoxyCompactList}\small\item\em mat\+Sum \char`\"{}\+Soma valores correspondentes de duas matrizes fornecidas, atribuindo os valores a uma matriz resultante.\char`\"{} \end{DoxyCompactList}\item 
+void \hyperlink{funcoes_8c_a6c84435d76b6718067fe36878c610306}{mat\+Sub} (\hyperlink{structmatriz}{matriz} $\ast$mA, \hyperlink{structmatriz}{matriz} $\ast$mB, \hyperlink{structmatriz}{matriz} $\ast$mC)
+\begin{DoxyCompactList}\small\item\em mat\+Sub \char`\"{}\+Subtrai valores correspondentes de duas matrizes fornecidas, atribuindo os valores a uma matriz resultante.\char`\"{} \end{DoxyCompactList}\item 
+void \hyperlink{funcoes_8c_af728a13cb2951013fde9f743752607bb}{mat\+Prod} (\hyperlink{structmatriz}{matriz} $\ast$mA, \hyperlink{structmatriz}{matriz} $\ast$mB, \hyperlink{structmatriz}{matriz} $\ast$mC)
+\begin{DoxyCompactList}\small\item\em mat\+Prod \char`\"{}\+Efetua a operação de multiplicação entre duas matrizes, armazenando o produto em uma matriz resultante.\char`\"{} \end{DoxyCompactList}\item 
+void \hyperlink{funcoes_8c_a08b5fe41d26c5c6fd6f72b44071bb040}{mat\+Read} (\hyperlink{structmatriz}{matriz} $\ast$m)
+\begin{DoxyCompactList}\small\item\em mat\+Read \char`\"{}\+Le uma matriz a partir de um arquivo de texto, considerando a quantidade de linhas e colunas.\char`\"{} \end{DoxyCompactList}\item 
+void \hyperlink{funcoes_8c_a023e0e385aad2d06ae85d50aef690e3b}{mat\+Write} (\hyperlink{structmatriz}{matriz} $\ast$m)
+\begin{DoxyCompactList}\small\item\em mat\+Write \char`\"{}\+Escreve uma matriz em um arquivo de texto(.\+txt).\char`\"{} \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Definições e macros}
+\mbox{\Hypertarget{funcoes_8c_a62249e384b997229a3e2ae74ade334e2}\label{funcoes_8c_a62249e384b997229a3e2ae74ade334e2}} 
+\index{funcoes.\+c@{funcoes.\+c}!D\+E\+L\+AY@{D\+E\+L\+AY}}
+\index{D\+E\+L\+AY@{D\+E\+L\+AY}!funcoes.\+c@{funcoes.\+c}}
+\subsubsection{\texorpdfstring{D\+E\+L\+AY}{DELAY}}
+{\footnotesize\ttfamily \#define D\+E\+L\+AY~2500}
+
+\mbox{\Hypertarget{funcoes_8c_a4bf6f11165a23227af11f1d0d75798a4}\label{funcoes_8c_a4bf6f11165a23227af11f1d0d75798a4}} 
+\index{funcoes.\+c@{funcoes.\+c}!D\+I\+M\+\_\+\+M\+AX@{D\+I\+M\+\_\+\+M\+AX}}
+\index{D\+I\+M\+\_\+\+M\+AX@{D\+I\+M\+\_\+\+M\+AX}!funcoes.\+c@{funcoes.\+c}}
+\subsubsection{\texorpdfstring{D\+I\+M\+\_\+\+M\+AX}{DIM\_MAX}}
+{\footnotesize\ttfamily \#define D\+I\+M\+\_\+\+M\+AX~20}
+
+\mbox{\Hypertarget{funcoes_8c_ac6a4a96db8fc395a280a5cb6654d5651}\label{funcoes_8c_ac6a4a96db8fc395a280a5cb6654d5651}} 
+\index{funcoes.\+c@{funcoes.\+c}!D\+I\+M\+\_\+\+M\+IN@{D\+I\+M\+\_\+\+M\+IN}}
+\index{D\+I\+M\+\_\+\+M\+IN@{D\+I\+M\+\_\+\+M\+IN}!funcoes.\+c@{funcoes.\+c}}
+\subsubsection{\texorpdfstring{D\+I\+M\+\_\+\+M\+IN}{DIM\_MIN}}
+{\footnotesize\ttfamily \#define D\+I\+M\+\_\+\+M\+IN~1}
+
+\mbox{\Hypertarget{funcoes_8c_ac3ddfb9af20a2dc934b0540be75f1241}\label{funcoes_8c_ac3ddfb9af20a2dc934b0540be75f1241}} 
+\index{funcoes.\+c@{funcoes.\+c}!L\+IM@{L\+IM}}
+\index{L\+IM@{L\+IM}!funcoes.\+c@{funcoes.\+c}}
+\subsubsection{\texorpdfstring{L\+IM}{LIM}}
+{\footnotesize\ttfamily \#define L\+IM~100}
+
+
+
+\subsection{Funções}
+\mbox{\Hypertarget{funcoes_8c_a4a6566491d9b2f4028e20f524c4563c9}\label{funcoes_8c_a4a6566491d9b2f4028e20f524c4563c9}} 
+\index{funcoes.\+c@{funcoes.\+c}!mat\+Atrib@{mat\+Atrib}}
+\index{mat\+Atrib@{mat\+Atrib}!funcoes.\+c@{funcoes.\+c}}
+\subsubsection{\texorpdfstring{mat\+Atrib()}{matAtrib()}}
+{\footnotesize\ttfamily void mat\+Atrib (\begin{DoxyParamCaption}\item[{\hyperlink{structmatriz}{matriz} $\ast$}]{ }\end{DoxyParamCaption})}
+
+
+
+mat\+Atrib \char`\"{}\+Permite que o usuário atribua valores manualmente as entradas de uma matriz fornecida.\char`\"{} 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em m} & \char`\"{}\+Uma váriavel do tipo \textquotesingle{}matriz\textquotesingle{} recebida pela função.\char`\"{} \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{funcoes_8c_ab2aa0cd0e9a01ec580a688ad199c6235}\label{funcoes_8c_ab2aa0cd0e9a01ec580a688ad199c6235}} 
+\index{funcoes.\+c@{funcoes.\+c}!mat\+Dim@{mat\+Dim}}
+\index{mat\+Dim@{mat\+Dim}!funcoes.\+c@{funcoes.\+c}}
+\subsubsection{\texorpdfstring{mat\+Dim()}{matDim()}}
+{\footnotesize\ttfamily void mat\+Dim (\begin{DoxyParamCaption}\item[{\hyperlink{structmatriz}{matriz} $\ast$}]{ }\end{DoxyParamCaption})}
+
+
+
+mat\+Dim \char`\"{}\+Dimensiona o tamanho da matriz a partir de dois valores inteiros fornecidos pelo usuário.\char`\"{} 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em r} & \char`\"{}\+Representa o número de linhas da matriz recebida pela função.\char`\"{} \\
+\hline
+{\em c} & \char`\"{}\+Representa o número de colunas da matriz recebida pela função.\char`\"{} \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{funcoes_8c_accf1f10f50d86bd9e5cd8f7ce1886dae}\label{funcoes_8c_accf1f10f50d86bd9e5cd8f7ce1886dae}} 
+\index{funcoes.\+c@{funcoes.\+c}!mat\+Init@{mat\+Init}}
+\index{mat\+Init@{mat\+Init}!funcoes.\+c@{funcoes.\+c}}
+\subsubsection{\texorpdfstring{mat\+Init()}{matInit()}}
+{\footnotesize\ttfamily void mat\+Init (\begin{DoxyParamCaption}\item[{\hyperlink{structmatriz}{matriz} $\ast$}]{ }\end{DoxyParamCaption})}
+
+
+
+mat\+Init \char`\"{}\+Atribui valores aleatórios, de um intervalo definido pelo usuário, as entradas de qualquer matriz fonecida.\char`\"{} 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em m} & \char`\"{}\+Uma váriavel do tipo \textquotesingle{}matriz\textquotesingle{} recebida pela função.\char`\"{} \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{funcoes_8c_aa524b18d40acb94660108696b46c8d04}\label{funcoes_8c_aa524b18d40acb94660108696b46c8d04}} 
+\index{funcoes.\+c@{funcoes.\+c}!mat\+Print@{mat\+Print}}
+\index{mat\+Print@{mat\+Print}!funcoes.\+c@{funcoes.\+c}}
+\subsubsection{\texorpdfstring{mat\+Print()}{matPrint()}}
+{\footnotesize\ttfamily void mat\+Print (\begin{DoxyParamCaption}\item[{\hyperlink{structmatriz}{matriz} $\ast$}]{ }\end{DoxyParamCaption})}
+
+
+
+mat\+Print \char`\"{}\+Exibe na tela os valores de uma matriz fornecida.\char`\"{} 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em m} & \char`\"{}\+Uma váriavel do tipo \textquotesingle{}matriz\textquotesingle{} recebida pela função.\char`\"{} \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{funcoes_8c_af728a13cb2951013fde9f743752607bb}\label{funcoes_8c_af728a13cb2951013fde9f743752607bb}} 
+\index{funcoes.\+c@{funcoes.\+c}!mat\+Prod@{mat\+Prod}}
+\index{mat\+Prod@{mat\+Prod}!funcoes.\+c@{funcoes.\+c}}
+\subsubsection{\texorpdfstring{mat\+Prod()}{matProd()}}
+{\footnotesize\ttfamily void mat\+Prod (\begin{DoxyParamCaption}\item[{\hyperlink{structmatriz}{matriz} $\ast$}]{,  }\item[{\hyperlink{structmatriz}{matriz} $\ast$}]{,  }\item[{\hyperlink{structmatriz}{matriz} $\ast$}]{ }\end{DoxyParamCaption})}
+
+
+
+mat\+Prod \char`\"{}\+Efetua a operação de multiplicação entre duas matrizes, armazenando o produto em uma matriz resultante.\char`\"{} 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em mA} & \char`\"{}\+Uma váriavel do tipo \textquotesingle{}matriz\textquotesingle{} recebida pela função.\char`\"{} \\
+\hline
+{\em mB} & \char`\"{}\+Uma váriavel do tipo \textquotesingle{}matriz\textquotesingle{} recebida pela função.\char`\"{} \\
+\hline
+{\em mC} & \char`\"{}\+Uma váriavel do tipo \textquotesingle{}matriz\textquotesingle{} recebida pela função.\char`\"{} \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{funcoes_8c_a08b5fe41d26c5c6fd6f72b44071bb040}\label{funcoes_8c_a08b5fe41d26c5c6fd6f72b44071bb040}} 
+\index{funcoes.\+c@{funcoes.\+c}!mat\+Read@{mat\+Read}}
+\index{mat\+Read@{mat\+Read}!funcoes.\+c@{funcoes.\+c}}
+\subsubsection{\texorpdfstring{mat\+Read()}{matRead()}}
+{\footnotesize\ttfamily void mat\+Read (\begin{DoxyParamCaption}\item[{\hyperlink{structmatriz}{matriz} $\ast$}]{ }\end{DoxyParamCaption})}
+
+
+
+mat\+Read \char`\"{}\+Le uma matriz a partir de um arquivo de texto, considerando a quantidade de linhas e colunas.\char`\"{} 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em m} & \char`\"{}\+Uma váriavel do tipo \textquotesingle{}matriz\textquotesingle{} recebida pela função.\char`\"{} \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{funcoes_8c_a6c84435d76b6718067fe36878c610306}\label{funcoes_8c_a6c84435d76b6718067fe36878c610306}} 
+\index{funcoes.\+c@{funcoes.\+c}!mat\+Sub@{mat\+Sub}}
+\index{mat\+Sub@{mat\+Sub}!funcoes.\+c@{funcoes.\+c}}
+\subsubsection{\texorpdfstring{mat\+Sub()}{matSub()}}
+{\footnotesize\ttfamily void mat\+Sub (\begin{DoxyParamCaption}\item[{\hyperlink{structmatriz}{matriz} $\ast$}]{,  }\item[{\hyperlink{structmatriz}{matriz} $\ast$}]{,  }\item[{\hyperlink{structmatriz}{matriz} $\ast$}]{ }\end{DoxyParamCaption})}
+
+
+
+mat\+Sub \char`\"{}\+Subtrai valores correspondentes de duas matrizes fornecidas, atribuindo os valores a uma matriz resultante.\char`\"{} 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em mA} & \char`\"{}\+Uma váriavel do tipo \textquotesingle{}matriz\textquotesingle{} recebida pela função.\char`\"{} \\
+\hline
+{\em mB} & \char`\"{}\+Uma váriavel do tipo \textquotesingle{}matriz\textquotesingle{} recebida pela função.\char`\"{} \\
+\hline
+{\em mC} & \char`\"{}\+Uma váriavel do tipo \textquotesingle{}matriz\textquotesingle{} recebida pela função.\char`\"{} \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{funcoes_8c_aa6172774a6c36f9a722aef90863bae2c}\label{funcoes_8c_aa6172774a6c36f9a722aef90863bae2c}} 
+\index{funcoes.\+c@{funcoes.\+c}!mat\+Sum@{mat\+Sum}}
+\index{mat\+Sum@{mat\+Sum}!funcoes.\+c@{funcoes.\+c}}
+\subsubsection{\texorpdfstring{mat\+Sum()}{matSum()}}
+{\footnotesize\ttfamily void mat\+Sum (\begin{DoxyParamCaption}\item[{\hyperlink{structmatriz}{matriz} $\ast$}]{,  }\item[{\hyperlink{structmatriz}{matriz} $\ast$}]{,  }\item[{\hyperlink{structmatriz}{matriz} $\ast$}]{ }\end{DoxyParamCaption})}
+
+
+
+mat\+Sum \char`\"{}\+Soma valores correspondentes de duas matrizes fornecidas, atribuindo os valores a uma matriz resultante.\char`\"{} 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em mA} & \char`\"{}\+Uma váriavel do tipo \textquotesingle{}matriz\textquotesingle{} recebida pela função.\char`\"{} \\
+\hline
+{\em mB} & \char`\"{}\+Uma váriavel do tipo \textquotesingle{}matriz\textquotesingle{} recebida pela função.\char`\"{} \\
+\hline
+{\em mC} & \char`\"{}\+Uma váriavel do tipo \textquotesingle{}matriz\textquotesingle{} recebida pela função.\char`\"{} \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{funcoes_8c_a023e0e385aad2d06ae85d50aef690e3b}\label{funcoes_8c_a023e0e385aad2d06ae85d50aef690e3b}} 
+\index{funcoes.\+c@{funcoes.\+c}!mat\+Write@{mat\+Write}}
+\index{mat\+Write@{mat\+Write}!funcoes.\+c@{funcoes.\+c}}
+\subsubsection{\texorpdfstring{mat\+Write()}{matWrite()}}
+{\footnotesize\ttfamily void mat\+Write (\begin{DoxyParamCaption}\item[{\hyperlink{structmatriz}{matriz} $\ast$}]{ }\end{DoxyParamCaption})}
+
+
+
+mat\+Write \char`\"{}\+Escreve uma matriz em um arquivo de texto(.\+txt).\char`\"{} 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em m} & \char`\"{}\+Uma váriavel do tipo \textquotesingle{}matriz\textquotesingle{} recebida pela função.\char`\"{} \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{funcoes_8c_ad16e5e62f3579a7048e6b981b172885e}\label{funcoes_8c_ad16e5e62f3579a7048e6b981b172885e}} 
+\index{funcoes.\+c@{funcoes.\+c}!menu@{menu}}
+\index{menu@{menu}!funcoes.\+c@{funcoes.\+c}}
+\subsubsection{\texorpdfstring{menu()}{menu()}}
+{\footnotesize\ttfamily void menu (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+menu \char`\"{}\+Apenas exibe o menu do usuário.\char`\"{} 
+

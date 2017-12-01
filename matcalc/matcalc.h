@@ -12,6 +12,12 @@ typedef struct{
 }matriz;
 
 /**
+ * @brief menu "Apenas exibe o menu do usuário."
+ */
+
+void menu();
+
+/**
  * @brief matDim "Dimensiona o tamanho da matriz a partir de dois valores inteiros fornecidos pelo usuário."
  * @param r "Representa o número de linhas da matriz recebida pela função."
  * @param c "Representa o número de colunas da matriz recebida pela função."

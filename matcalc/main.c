@@ -27,27 +27,7 @@ int main(void){
 
     while(sair == 0){
 
-        printf("PROGRAMA DE MANIPULACAO DE MATRIZES\n\n");
-        printf("(1) Definir o tamanho da matriz A\n");
-        printf("(2) Definir o tamanho da matriz B\n");
-        printf("(3) Preencher a matriz A com valores aleatorios\n");
-        printf("(4) Preencher a matriz B com valores aleatorios\n");
-        printf("(5) Atribuir valor para um elemento da matriz A\n");
-        printf("(6) Atribuir valor para um elemento da matriz B\n");
-        printf("(7) Calcular A+B\n");
-        printf("(8) Calcular A-B\n");
-        printf("(9) Calcular A*B\n");
-        printf("(10) Imprimir matriz A\n");
-        printf("(11) Imprimir matriz B\n");
-        printf("(12) Imprimir matriz C\n");
-        printf("(13) Ler a matriz A de um arquivo\n");
-        printf("(14) Ler a matriz B de um arquivo\n");
-        printf("(15) Escrever a matriz C em um arquivo\n");
-        printf("(16) Sair\n");
-
-        //printf("\nlA=%d cA=%d lB=%d cB=%d lC=%d cC=%d\n", matA.r, matA.c, matB.r, matB.c, matC.r, matC.c);
-
-        printf("\nDigite sua opcao: ");
+        menu();
 
         scanf("%d", &opcao);
 
