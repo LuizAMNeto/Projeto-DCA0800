@@ -1,4 +1,0 @@
-var dir_3d49935144524591cdd27c077eb10866 =
-[
-    [ "Projeto-DCA0800", "dir_87e2adf0929534f59aa2e7025430c8e6.html", "dir_87e2adf0929534f59aa2e7025430c8e6" ]
-];
