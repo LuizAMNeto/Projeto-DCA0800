@@ -9,5 +9,6 @@ var searchData=
   ['matread',['matRead',['../funcoes_8c.html#a08b5fe41d26c5c6fd6f72b44071bb040',1,'matRead(matriz *m):&#160;funcoes.c'],['../matcalc_8h.html#a8fc344848c43570e03f79b163a5087a2',1,'matRead(matriz *):&#160;funcoes.c']]],
   ['matsub',['matSub',['../funcoes_8c.html#a6c84435d76b6718067fe36878c610306',1,'matSub(matriz *mA, matriz *mB, matriz *mC):&#160;funcoes.c'],['../matcalc_8h.html#a2c7cbf84cffab529108f3e7e5dba7513',1,'matSub(matriz *, matriz *, matriz *):&#160;funcoes.c']]],
   ['matsum',['matSum',['../funcoes_8c.html#aa6172774a6c36f9a722aef90863bae2c',1,'matSum(matriz *mA, matriz *mB, matriz *mC):&#160;funcoes.c'],['../matcalc_8h.html#a7adbb234410616c3e792ae80ca178d31',1,'matSum(matriz *, matriz *, matriz *):&#160;funcoes.c']]],
-  ['matwrite',['matWrite',['../funcoes_8c.html#a023e0e385aad2d06ae85d50aef690e3b',1,'matWrite(matriz *m):&#160;funcoes.c'],['../matcalc_8h.html#a01085fcb0cb841f182f9027bf6e6d89d',1,'matWrite(matriz *):&#160;funcoes.c']]]
+  ['matwrite',['matWrite',['../funcoes_8c.html#a023e0e385aad2d06ae85d50aef690e3b',1,'matWrite(matriz *m):&#160;funcoes.c'],['../matcalc_8h.html#a01085fcb0cb841f182f9027bf6e6d89d',1,'matWrite(matriz *):&#160;funcoes.c']]],
+  ['menu',['menu',['../funcoes_8c.html#ad16e5e62f3579a7048e6b981b172885e',1,'menu(void):&#160;funcoes.c'],['../matcalc_8h.html#a2a0e843767aeea4f433a28b9c54f573a',1,'menu():&#160;funcoes.c']]]
 ];

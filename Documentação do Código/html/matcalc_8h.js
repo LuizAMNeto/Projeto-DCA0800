@@ -10,5 +10,6 @@ var matcalc_8h =
     [ "matRead", "matcalc_8h.html#a8fc344848c43570e03f79b163a5087a2", null ],
     [ "matSub", "matcalc_8h.html#a2c7cbf84cffab529108f3e7e5dba7513", null ],
     [ "matSum", "matcalc_8h.html#a7adbb234410616c3e792ae80ca178d31", null ],
-    [ "matWrite", "matcalc_8h.html#a01085fcb0cb841f182f9027bf6e6d89d", null ]
+    [ "matWrite", "matcalc_8h.html#a01085fcb0cb841f182f9027bf6e6d89d", null ],
+    [ "menu", "matcalc_8h.html#a2a0e843767aeea4f433a28b9c54f573a", null ]
 ];

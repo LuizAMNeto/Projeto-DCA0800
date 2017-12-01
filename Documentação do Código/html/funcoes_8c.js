@@ -12,5 +12,6 @@ var funcoes_8c =
     [ "matRead", "funcoes_8c.html#a08b5fe41d26c5c6fd6f72b44071bb040", null ],
     [ "matSub", "funcoes_8c.html#a6c84435d76b6718067fe36878c610306", null ],
     [ "matSum", "funcoes_8c.html#aa6172774a6c36f9a722aef90863bae2c", null ],
-    [ "matWrite", "funcoes_8c.html#a023e0e385aad2d06ae85d50aef690e3b", null ]
+    [ "matWrite", "funcoes_8c.html#a023e0e385aad2d06ae85d50aef690e3b", null ],
+    [ "menu", "funcoes_8c.html#ad16e5e62f3579a7048e6b981b172885e", null ]
 ];
